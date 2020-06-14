@@ -1,0 +1,173 @@
+body{
+    background-image:url("bg2.jpg");
+    background-attachment:fixed;
+
+}
+h2{
+text-align:center;
+color:white;
+
+
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 20px;
+}
+.column2{
+  float: left;
+  width: 500px;
+  margin-bottom:50px;
+padding-top:30px;
+
+}
+.row2{
+  padding-left:240px;
+
+
+}
+/* The Modal (background) */
+.modal1,.modal2,.modal3,.modal4 {
+  
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius:25px;
+  width: 25%;
+}
+
+/* The Close Button */
+.close1,.close2,.close3,.close4 {
+  color: red;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus,.close2:hover,.close2:focus,.close3:hover,.close3:focus,.close4:hover,.close4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;}
+
+/* Remove extra left and right margins, due to padding */
+
+.row1{
+ padding:30px;
+}
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    
+  }
+}
+
+/* Style the counter cards */
+.card1{
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.9);
+  border-radius:10px;
+  transform: skew(-5deg);
+  padding: 16px;
+  text-align: center;
+  background-color: coral;
+  height: 328px;
+}
+}
+.team-area{
+    padding:60px 0;
+    background:black;
+    
+  }
+
+  .section-heading{
+    text-align:center;
+    color:#fff;
+    margin-bottom:50px;
+    text-transform:uppercase;
+    font-size:65px;
+    font-family:bignoodletitling;
+    letter-spacing:5px;
+  }
+
+  .img-area{
+    width:180px;
+    height:180px;
+    display:inline-block;
+    overflow:hidden;
+    
+
+  }
+  .team-single:hover .side-two{
+    transform:rotateY(0deg);
+    border-radius:5px;
+  }
+ 
+  .team-single:hover .side-one{
+    transform:rotateY(180deg);
+  }
+  .content-area{
+    transform:perspective(1000px);
+    transition:1s;
+    transform-style:preserve-3d;
+    position:relative;
+  }
+  .side-one{
+    position:relative;
+    transform:rotateY(0deg);
+    z-index:2;
+    margin-bottom:30px;
+  }
+  .side-two{
+    position:relative;
+    transform:rotateY(0deg);
+    z-index:2;
+    margin-bottom:30px;
+  }
+  .side-two{
+    position:absolute;
+    top:0;
+    left:0;
+    background:#565656;
+    transform:rotateY(-180deg);
+
+
+  }
+  .side-one,.side-two{
+    backface-visibility:hidden;
+    transform-style:preserve-3d;
+    transition:1s;
+
+  }
+  .side-one .card,
+  .side-two .card{
+    min-height:300px;
+    
+  }
