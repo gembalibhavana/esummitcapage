@@ -1,13 +1,35 @@
 body{
-    background-image:url("bg2.jpg");
+    background-color:black;
     background-attachment:fixed;
 
 }
 h2{
 text-align:center;
-color:white;
+}
 
-
+#header {
+  background-image:url("footer-graphic.png");
+  background-repeat:no-repeat;
+  
+  background-size:100% 100% ;
+    
+    padding: 30px 430px;
+    
+    color: white;
+    
+    font-size: 70px; 
+     position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.2s;
+  z-index:1;
+  }
+  #header p{
+    font-family: 'Satisfy', cursive;
+    }
+#cont{
+  background-image:url("footer-background.png");
+  background-size:100% 100%;
 }
 
 /* Float four columns side by side */
@@ -71,7 +93,8 @@ padding-top:30px;
 /* Remove extra left and right margins, due to padding */
 
 .row1{
- padding:30px;
+ 
+ margin:20vh;
 }
 /* Clear floats after the columns */
 .row1:after {
@@ -170,4 +193,38 @@ padding-top:30px;
   .side-two .card{
     min-height:300px;
     
+  }
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }
