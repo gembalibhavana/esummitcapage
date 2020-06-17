@@ -1,129 +1,40 @@
 body{
-    background-color:black;
-    background-attachment:fixed;
+  background-color:rgb(35, 33, 33);
+    
 
+}
+#incentives{
+  background-image:url("bck.png");
+  
+    background-attachment:fixed;
+    
+    background-size:cover;
 }
 h2{
 text-align:center;
+
 }
 
-#header {
-  background-image:url("footer-graphic.png");
-  background-repeat:no-repeat;
-  
-  background-size:100% 100% ;
-    
-    padding: 30px 430px;
-    
-    color: white;
-    
-    font-size: 70px; 
-     position: fixed;
-    top: 0;
-    width: 100%;
-    transition: 0.2s;
-  z-index:1;
-  }
-  #header p{
-    font-family: 'Satisfy', cursive;
-    }
+
 #cont{
-  background-image:url("footer-background.png");
-  background-size:100% 100%;
-}
-
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 20px;
-}
-.column2{
-  float: left;
-  width: 500px;
-  margin-bottom:50px;
-padding-top:30px;
+ background-color:black;
 
 }
-.row2{
-  padding-left:240px;
 
 
-}
-/* The Modal (background) */
-.modal1,.modal2,.modal3,.modal4 {
-  
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+
+.modal-header{
+  min-height:45vh;
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  border-radius:25px;
-  width: 25%;
+
+#whyca{
+  background-color:rgb(14,14,34);
 }
 
-/* The Close Button */
-.close1,.close2,.close3,.close4 {
-  color: red;
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-}
 
-.close1:hover,
-.close1:focus,.close2:hover,.close2:focus,.close3:hover,.close3:focus,.close4:hover,.close4:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;}
-
-/* Remove extra left and right margins, due to padding */
-
-.row1{
- 
- margin:20vh;
-}
-/* Clear floats after the columns */
-.row1:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-    
-  }
-}
-
-/* Style the counter cards */
-.card1{
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.9);
-  border-radius:10px;
-  transform: skew(-5deg);
-  padding: 16px;
-  text-align: center;
-  background-color: coral;
-  height: 328px;
-}
-}
 .team-area{
     padding:60px 0;
     background:black;
@@ -194,37 +105,197 @@ padding-top:30px;
     min-height:300px;
     
   }
-  .sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
   
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
+
+
+
+  @import url(http://fonts.googleapis.com/css?family=Oswald);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-attachment: fixed;
+}
+
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
   
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  width: auto;
+  border-bottom: 1px solid rgb(10, 10, 98);
   
-  .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+  font-family: 'Oswald', sans-serif;
+  line-height: 1;
+  background: black;
+  box-shadow: 1px 1px 0 rgb(10, 10, 98), 2px 2px 0 rgb(10, 10, 98), 3px 3px 3px rgb(10, 10, 98);
+}
+#cssmenu > ul {
+  background: url('images/bg.png');
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu > ul > li > a {
+  padding: 20px 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+#cssmenu > ul > li > a:hover,
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li.active > a {
+  color: rgb(10, 188, 228);
+}
+#cssmenu #menu-indicator {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-bottom-color: rgb(10, 10, 98);
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+#cssmenu.small-screen {
+  width: 100%;
+}
+#cssmenu.small-screen > ul,
+#cssmenu.small-screen.align-center > ul {
+  width: 100%;
+  text-align: left;
+}
+#cssmenu.small-screen > ul > li,
+#cssmenu.small-screen.align-center > ul > li {
+  float: none;
+  display: block;
+  border-top: 1px solid rgba(100, 100, 100, 0.1);
+}
+#cssmenu.small-screen > ul > li > a {
+  padding: 18px 25px;
+}
+#cssmenu.small-screen > ul > li:after,
+#cssmenu.small-screen > ul > li:before {
+  display: none;
+}
+#cssmenu.small-screen #menu-button {
+  display: block;
+  padding: 18px 25px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: blue;
+  background: url('images/bg.png');
+}
+#cssmenu.small-screen #menu-button.menu-opened {
+  color: rgba(0, 0, 255, 0.816);
+}
+#cssmenu.small-screen #menu-button:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 19.5px;
+  display: block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+  border-bottom: 1px solid rgb(10, 10, 98);
+  width: 18px;
+  height: 3px;
+}
+#cssmenu.small-screen #menu-button.menu-opened:after {
+  border-top: 2px solid #444444;
+  border-bottom: 2px solid #444444;
+}
+#cssmenu.small-screen #menu-button:before {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 29.5px;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: black;
+}
+#cssmenu.small-screen #menu-button.menu-opened:before {
+  background: black;
+}
+#cssmenu.small-screen #menu-indicator {
+  display: none;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+#er{
+  display:none;
+}
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+#er{
+  display:none;
+}
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+ #er{
+   display:none;
+ }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
