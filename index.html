@@ -26,19 +26,30 @@
 <div id='cssmenu'>
  
 <ul >
-   <li id="er"><img src="logo_bg.png" style="height:7vh;width:170px" ></li>
-   <li id="er"  ><a >Campus Ambassador Program</a></li>
-   <li  class="wow slideInRight" animation-duration="1s" animation-delay="1s" class='active'><a href='#home'>Home</a></li>
-   <li   class="wow slideInRight" animation-duration="1s" animation-delay="2s"><a href='#aboutus'>About Us</a></li>
-   <li  class="wow slideInRight" animation-duration="1s" animation-delay="3s"><a href='#whyca'>Why Ca?</a></li>
-   <li  class="wow slideInRight" animation-duration="1s" animation-delay="4s"><a href='#incentives'>Incentives</a></li>
-   <li  class="wow slideInRight" animation-duration="1s" animation-delay="5s"><a href='#resp'>Responsibilities</a></li>
-   <li   class="wow slideInRight" animation-duration="1s"  animation-delay="6s"><a href='#cont'>Contact Us</a></li>
+   <li id="er" ><img src="logo_bg.png" style="height:7vh;width:170px" ></li>
+  
+   <li  class="wow slideInLeft" animation-duration="1s" animation-delay="1s"  class='active'><a href='#home'>Home</a></li>
+   <li   class="wow slideInLeft" animation-duration="1s" animation-delay="2s"><a href='#aboutus'>About Us</a></li>
+   <li  class="wow slideInLeft" animation-duration="1s" animation-delay="3s"><a href='#whyca'>Why Ca?</a></li>
+   <li  class="wow slideInLeft" animation-duration="1s" animation-delay="4s"><a href='#incentives'>Incentives</a></li>
+   <li  class="wow slideInLeft" animation-duration="1s" animation-delay="5s"><a href='#resp'>Responsibilities</a></li>
+   <li   class="wow slideInLeft" animation-duration="1s"  animation-delay="6s"><a href='#cont'>Contact Us</a></li>
    
 </ul>
 </div>
 </div>
 
+<div class="header" id="header" style="height:100vh">
+  <h1 class="ml6">
+    <span class="text-wrapper">
+      <span class="letters">Beautiful Questions</span>
+    </span>
+  </h1>
+  
+    
+  </div>
+ 
+</div>
   
    
         
@@ -384,7 +395,7 @@
 
 
 
-<div class="container-fluid"  id="cont" style=" width:102%;height:auto;padding-left:5vw;z-index:1000">
+<div class="container-fluid"  id="cont" style=" width:102%;height:auto;padding-left:5vw;z-index:1000;background-color:black">
 
  
   <div class="row d-flex justify-content-center" style="padding-bottom:10vh;padding-top:10vh">
@@ -410,12 +421,34 @@
 </div>
 
 
-
 <script src="js/wow.min.js"></script>
 <script>
 new WOW().init();
 </script>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+<script type="text/javascript">
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 100000000000000000000000000000000000000000000000000
+  });ch
+</script>
 
 
      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

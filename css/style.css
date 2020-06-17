@@ -1,5 +1,6 @@
 body{
   background-color:rgb(35, 33, 33);
+
     
 
 }
@@ -14,7 +15,15 @@ h2{
 text-align:center;
 
 }
+#header{
+  background-image:url("es121.jpg");
+  
+  background-attachment:fixed;
+  
+  background-size:100% 100%;
+}
 
+}
 
 #cont{
  background-color:black;
@@ -298,4 +307,25 @@ text-align:center;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
+}
+
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  padding-top:50vh;
+  position: relative;
+  display: inline-block;
+  
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
 }

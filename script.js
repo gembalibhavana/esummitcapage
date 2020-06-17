@@ -3,7 +3,7 @@
   $.fn.menumaker = function(options) {
       
       var cssmenu = $(this), settings = $.extend({
-        title: "Campus Ambassador program",
+        title: "E-Summit'21",
         format: "dropdown",
         breakpoint: 768,
         sticky: false
@@ -98,7 +98,7 @@ $(document).ready(function(){
 
 $(window).load(function() {
   $("#cssmenu").menumaker({
-    title: "Campus Ambassador program ",
+    title: "E-Summit'21",
     format: "dropdown"
   });
 
