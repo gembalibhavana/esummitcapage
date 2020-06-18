@@ -16,7 +16,7 @@ text-align:center;
 
 }
 #header{
-  background-image:url("es121.jpg");
+  background-image:url("img/finallyy.jpg");
   
   background-attachment:fixed;
   
@@ -31,7 +31,9 @@ text-align:center;
 }
 
 
+#aboutus{
 
+}
 
 
 .modal-header{
@@ -151,7 +153,7 @@ text-align:center;
   display: none;
 }
 #cssmenu {
-  width: auto;
+  width: 103%;
   border-bottom: 1px solid rgb(10, 10, 98);
   
   font-family: 'Oswald', sans-serif;
@@ -276,56 +278,7 @@ text-align:center;
   display: none;
 }
 
+*{
+overflow-horizontal:hidden;}
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-#er{
-  display:none;
-}
-} 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-#er{
-  display:none;
-}
-} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
- #er{
-   display:none;
- }
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
-
-.ml6 {
-  position: relative;
-  font-weight: 900;
-  font-size: 3.3em;
-}
-
-.ml6 .text-wrapper {
-  padding-top:50vh;
-  position: relative;
-  display: inline-block;
-  
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml6 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
