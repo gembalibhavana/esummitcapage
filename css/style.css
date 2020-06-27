@@ -5,7 +5,7 @@ body{
 
 }
 #incentives{
-  background-image:url("bck.png");
+  background-color:black;
   
     background-attachment:fixed;
     
@@ -23,7 +23,7 @@ text-align:center;
   background-size:100% 100%;
 }
 
-}
+
 
 #cont{
  background-color:black;
@@ -31,9 +31,6 @@ text-align:center;
 }
 
 
-#aboutus{
-
-}
 
 
 .modal-header{
@@ -42,9 +39,10 @@ text-align:center;
 
 
 #whyca{
-  background-color:rgb(14,14,34);
+  background-color:rgb(14, 14, 34);
+  
+  
 }
-
 
 .team-area{
     padding:60px 0;
@@ -88,13 +86,13 @@ text-align:center;
     position:relative;
     transform:rotateY(0deg);
     z-index:2;
-    margin-bottom:30px;
+    margin-bottom:70px;
   }
   .side-two{
     position:relative;
     transform:rotateY(0deg);
     z-index:2;
-    margin-bottom:30px;
+    margin-bottom:70px;
   }
   .side-two{
     position:absolute;

@@ -18,9 +18,11 @@
    
    <style>
 
+
+
 .bg {
   animation:slide14 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg,rgba(7, 12, 100, 0.864) 50%, rgba(2, 6, 78, 0.612) 50%);
+  background-image: linear-gradient(-60deg,rgb(3, 8, 100) 50%,black 50%);
   bottom:0;
   left:-50%;
   opacity:.5;
@@ -65,6 +67,41 @@ h1 {
   }
 }
 
+.rotate123{
+  animation: rotation 2s infinite linear;
+
+}
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
+}
+
+.panel-group{
+    margin:0;
+}
+
+.panel{
+    border:none;
+    box-shadow:none;
+}
+
+.panel-heading{
+    padding:0;
+}
+
+li {
+  text-decoration:none;
+}
+ul{
+  text-decoration:none;
+}
+a{
+  text-decoration:none;
+}
 
 </style>
     <title>campus ambassador program 
@@ -133,7 +170,7 @@ Campus Ambassador Program
           </div>
           <div class="row justify-content-center" style="padding-top:3vh;padding-bottom:10vh">
           
-            <div class=" col-12 col-md-9 " style="text-align: center;font-size: 1.7rem">
+            <div class=" col-12 col-md-8 " style="text-align: center;font-size: 1.7rem">
                <p class="wow bounceInDown" animation-duration="3s">The Entrepreneurship Cell is a non-profit organization run by the students of IIT Bhubaneswar
                 that aims at manifesting the latent entrepreneurial spirit of the young students from all corners of India. 
                </p>
@@ -285,108 +322,177 @@ Campus Ambassador Program
 
 
 
-
-<div class="container-fluid" id="incentives" style="height:auto;width:103%">
-<div class="row" style="text-align:center;padding-top:6vh;padding-bottom:5vh">
-<div class="col-12">
-<h1 style="color:white" class="wow fadeInUp" animation-duration="4s">Incentives</h1>
-</div>
-
-</div>
-  <div class="row" style="padding-top:4vh;padding-bottom:10vh">
-    <div class="col-12 col-sm-3" style="text-align:center">
-<button type="button" class="wow fadeInLeft" style="margin-top:2vh;padding-left:0;padding-right:0" animation-duration="2s" data-toggle="modal" data-target="#myModal1"><img src="certified.jfif" style="height:250px;width:250px"></button>
-
-
-<div id="myModal1" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-   
-    <div class="modal-content">
-      <div class="modal-header">
-
-        
-      </div>
-      <div class="modal-body">
-        
-        <p>Some text in the modal.</p>
-      </div>
-      
+<div class="cotainer-fluid" id="incentives" style="height:auto;background-color:black;width:103%">
+  <div class="container"  style="height:auto">
+    <div class="row" style="text-align:center;padding-top:6vh;padding-bottom:5vh">
+    <div class="col-12">
+    <h1 style="color:white" class="wow fadeInUp" animation-duration="4s">Incentives</h1>
     </div>
-
-  </div>
-</div>
-    </div>
-    <div class="col-12 col-sm-3 " style="text-align:center">
-    <button type="button" class="wow fadeInLeft" style="margin-top:2vh;padding-left:0;padding-right:0" animation-duration="2s" data-toggle="modal" data-target="#myModal2"><img src="goodies.jfif" style="height:250px;width:250px"></button>
-
-
-<div id="myModal2" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-   
-    <div class="modal-content">
-      <div class="modal-header" >
-        
-      </div>
-      <div class="modal-body">
-        
-        <p>Some text in the modal.</p>
-      </div>
-     
-    </div>
-
-  </div>
-</div>
-    </div>
- 
-    <div class="col-12 col-sm-3 " style="text-align:center">
- <button type="button" class="wow fadeInRight" animation-duration="2s" style="margin-top:2vh;padding-left:0;padding-right:0" data-toggle="modal" data-target="#myModal3"><img src="passes.jfif" style="height:250px;width:250px"></button>
-
-
-<div id="myModal3" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
     
-    <div class="modal-content">
-      <div class="modal-header">
+    </div>
+      <div class="row " style="padding-bottom:3vh">
+        <div class="col-12 col-sm-4 justify-content-center" style="text-align:center">
+    <button type="button" class="wow fadeInLeft" style="margin-top:2vh;padding-left:0;padding-right:0" animation-duration="2s" data-toggle="modal" data-target="#myModal1"><img src="certified.jfif" style="height:250px;width:250px"></button>
+    
+    
+    <div id="myModal1" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
        
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-     
-    </div>
-
-  </div>
-</div>
-    </div>
-    <div class="col-12 col-sm-3 " style="text-align:center">
-   <button type="button" class="wow fadeInRight" animation-duration="2s" style="margin-top:2vh;padding-left:0;padding-right:0" data-toggle="modal" data-target="#myModal4"><img src="speakers.jfif" style="height:250px;width:250px"></button>
-
-
-<div id="myModal4" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
+        <div class="modal-content">
+          <div class="modal-header">
     
-    <div class="modal-content">
-      <div class="modal-header">
-  
+            
+          </div>
+          <div class="modal-body">
+            
+            <p>Some text in the modal.</p>
+          </div>
+          
+        </div>
+    
       </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
+    </div>
+        </div>
+        <div class="col-12 col-sm-4 justify-content-center" style="text-align:center">
+        <button type="button" class="wow fadeInLeft" style="margin-top:2vh;padding-left:0;padding-right:0" animation-duration="2s" data-toggle="modal" data-target="#myModal2"><img src="goodies.jfif" style="height:250px;width:250px"></button>
+    
+    
+    <div id="myModal2" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+       
+        <div class="modal-content">
+          <div class="modal-header" >
+            
+          </div>
+          <div class="modal-body">
+            
+            <p>Some text in the modal.</p>
+          </div>
+         
+        </div>
+    
       </div>
+    </div>
+        </div>
      
+        <div class="col-12 col-sm-4 justify-content-center" style="text-align:center">
+     <button type="button" class="wow fadeInRight" animation-duration="2s" style="margin-top:2vh;padding-left:0;padding-right:0" data-toggle="modal" data-target="#myModal3"><img src="passes.jfif" style="height:250px;width:250px"></button>
+    
+    
+    <div id="myModal3" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        
+        <div class="modal-content">
+          <div class="modal-header">
+           
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+         
+        </div>
+    
+      </div>
     </div>
-
-  </div>
-</div>
+        </div>
+    
+    
+       
+    
+        
+      </div>
+    
+      <div class="row" style="text-align:center;padding-bottom:5vh">
+       
+        
+        </div>
+          <div class="row justify-content-center" style="padding-top:4vh;padding-bottom:10vh">
+            <div class="col-12 col-sm-4 justify-content-center" style="text-align:center">
+        <button type="button" class="wow fadeInLeft" style="margin-top:2vh;padding-left:0;padding-right:0" animation-duration="2s" data-toggle="modal" data-target="#myModal1"><img src="certified.jfif" style="height:250px;width:250px"></button>
+        
+        
+        <div id="myModal1" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+           
+            <div class="modal-content">
+              <div class="modal-header">
+        
+                
+              </div>
+              <div class="modal-body">
+                
+                <p>Some text in the modal.</p>
+              </div>
+              
+            </div>
+        
+          </div>
+        </div>
+            </div>
+            <div class="col-12 col-sm-4 justify-content-center" style="text-align:center">
+            <button type="button" class="wow fadeInLeft" style="margin-top:2vh;padding-left:0;padding-right:0" animation-duration="2s" data-toggle="modal" data-target="#myModal2"><img src="goodies.jfif" style="height:250px;width:250px"></button>
+        
+        
+        <div id="myModal2" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+           
+            <div class="modal-content">
+              <div class="modal-header" >
+                
+              </div>
+              <div class="modal-body">
+                
+                <p>Some text in the modal.</p>
+              </div>
+             
+            </div>
+        
+          </div>
+        </div>
+            </div>
+         
+            <div class="col-12 col-sm-4 justify-content-center" style="text-align:center">
+         <button type="button" class="wow fadeInRight" animation-duration="2s" style="margin-top:2vh;padding-left:0;padding-right:0" data-toggle="modal" data-target="#myModal3"><img src="passes.jfif" style="height:250px;width:250px"></button>
+        
+        
+        <div id="myModal3" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+            
+            <div class="modal-content">
+              <div class="modal-header">
+               
+              </div>
+              <div class="modal-body">
+                <p>Some text in the modal.</p>
+              </div>
+             
+            </div>
+        
+          </div>
+        </div>
+            </div>
+        
+        
+           
+        
+            
+          </div>
+    
+    
+    
     </div>
-  </div>
 </div>
 
 
-<div id="responsibilities">
+
+
+<div id="responsibilities" class="container-fluid" style="height:auto;background-color:rgb(35, 125, 160);width:103%">
 
 <br><h2 align="center" style="color:white" class="wow fadeInUp">RESPONSIBILITIES</h2><br><br>
     <section class="teamarea" >
@@ -474,6 +580,74 @@ Campus Ambassador Program
 
 </div>
 
+<div  id="faq" class="container-fluid" style =" height:auto;width:103%;background-color:rgb(14, 13, 12)">
+<div class="row" >
+  <div class="col-12 justify-content-center d-flex align-items-center" style="height:15vh;background-color:rgb(14, 13, 12);color:white">
+    <h1 style="font-size:1.5rem">
+      frequently
+    </h1>
+    
+    <h1 style="font-size:1rem">
+      asked
+    </h1>
+    
+    <h1 style="font-size:2.5rem">
+      QUESTIONS
+    </h1>
+    <h1 class="rotate123" style="font-size:5.5rem"> ?</h1>
+  </div>
+</div>
+<div class="row">
+<div class="col-12 align-items-center justify-content-center d-flex">
+
+  <ul class="nav nav-pills nav-stacked">
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <p class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">PROJECTS</a>
+          </p>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+          <div class="panel-body">
+            <ul>
+              <li><a href="#napoli" tabindex="-1" data-toggle="tab">NAPOLI</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+     </ul>
+</div> 
+
+<div class="col-12 align-items-center justify-content-center d-flex">
+
+  <ul class="nav nav-pills nav-stacked">
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <p class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">PROJECTS</a>
+          </p>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">
+            <ul>
+              <li><a href="#napoli1" tabindex="-1" data-toggle="tab">NAPOLI1</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+     </ul>
+</div> 
+
+
+
+</div>
+</div>
 
 
 
