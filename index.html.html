@@ -22,10 +22,10 @@
 
 .bg {
   animation:slide14 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg,rgb(3, 8, 100) 50%,black 50%);
+  background-image: linear-gradient(-60deg,rgb(8, 9, 56) 50%,black 50%);
   bottom:0;
   left:-50%;
-  opacity:.5;
+  opacity:.2;
   position:fixed;
   right:-50%;
   top:0;
@@ -79,29 +79,154 @@ h1 {
     transform: rotateY(359deg);
   }
 }
+@import url("https://fonts.googleapis.com/css?family=Karla|Space+Mono");
 
-.panel-group{
-    margin:0;
-}
+:root {
 
-.panel{
-    border:none;
-    box-shadow:none;
+  --sectionWidth: 1000px;
 }
 
-.panel-heading{
-    padding:0;
+* {
+  outline: 0;
+  box-sizing: border-box;
 }
 
-li {
-  text-decoration:none;
+body {
+  background-color: #000;
 }
-ul{
-  text-decoration:none;
+
+#section1{
+  max-width: var(--sectionWidth);
+  margin: 0px auto;
+  
+  width: 97%;
+  color: #fff;
 }
-a{
-  text-decoration:none;
+
+summary {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 22px;
+  transition: .3s;
+  border-bottom: 2px solid;
+  user-select: none;
 }
+
+details > div {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+
+  user-select: none;
+  padding: 0 20px;
+  font-family: "Karla", sans-serif;
+  line-height: 1.5;
+}
+
+
+details > div > p {
+  flex: 1;
+}
+
+details[open] > summary {
+   color: red;
+}
+
+@media (min-width: 768px) {
+  details[open] > div > p {
+    opacity: 0;
+    animation-name: showContent;
+    animation-duration: 0.6s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  details[open] > div {
+    animation-name: slideDown;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: var(--contentHeight);
+    padding: 20px;
+  }
+}
+
+@keyframes showImage {
+  from {
+    opacity: 0;
+    clip-path: inset(50% 0 50% 0);
+    transform: scale(0.4);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+#loader{
+      height: 1500px;
+      width: 1500px;
+      background:black;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 999;      
+  }
+  #loader img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+
+
+.accordion .card {
+  border: none;
+  margin-bottom: 20px;
+}
+.accordion .card h2 {
+  background: url(https://cdn0.iconfinder.com/data/icons/entypo/91/arrow56-512.png) no-repeat calc(100% - 10px) center;
+  background-size: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.accordion .card h2.collapsed {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/expand2-256.png);
+}
+.accordion .card-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 
 </style>
     <title>campus ambassador program 
@@ -113,6 +238,14 @@ a{
     </head>
 
     <body>
+
+      <div id="loader">
+        <img src="css/img/gif3.gif" alt="" srcset="">
+    </div>
+
+
+
+
 
 <div class="container-fluid" style="position:fixed;z-index:2;width:103%">
 <div id='cssmenu'>
@@ -165,18 +298,18 @@ Campus Ambassador Program
   <div class="container-fluid" id="aboutus" style="color:white;height:auto">
           <div class="row" style="padding-top:10vh">
             <div class="col-12">
-              <h1 style="text-align:center;font-size:4rem" class="wow bounceIn" animation-duration="3s">About Us</h1>
+              <h1 style="text-align:center;font-size:3.5rem" class="wow bounceIn" animation-duration="3s">About Us</h1>
             </div>
           </div>
           <div class="row justify-content-center" style="padding-top:3vh;padding-bottom:10vh">
           
-            <div class=" col-12 col-md-8 " style="text-align: center;font-size: 1.7rem">
+            <div class=" col-12 col-md-8 " style="text-align: center;font-size: 1.2rem">
                <p class="wow bounceInDown" animation-duration="3s">The Entrepreneurship Cell is a non-profit organization run by the students of IIT Bhubaneswar
-                that aims at manifesting the latent entrepreneurial spirit of the young students from all corners of India. 
+                that aims at manifesting the latent entrepreneurial spirit of the young students from all corners of India. Keeping this motto in mind the E-Cell, IIT Bhubaneswar is reaching out to all the colleges across India to promote 
+                entrepreneurial outlook among students by engaging them with different activities of the E-Cell, IIT Bhubaneswar.  
                </p>
                <p class="wow bounceInUp" animation-duration="3s">
-                Keeping this motto in mind the E-Cell, IIT Bhubaneswar is reaching out to all the colleges across India to promote 
-                entrepreneurial outlook among students by engaging them with different activities of the E-Cell, IIT Bhubaneswar.  
+                 The Summit seeks to facilitate interaction among industrialists, funding agencies, seasoned and upcoming entrepreneurs, academia and students of the participating institutes. E-Summit’20 will include a gamut of activities such as entrepreneurial guest lectures, workshops and panel discussions with experts, startup internship fair and investors drive. E-summit, as a culture of IIT Bhubaneswar, has proved its worth in depleting the Chasm that exists between Entrepreneurship and management. It is the stage for future Industry leaders and Entrepreneurs to exercise their skills.
                </p>
             </div>
         </div>
@@ -492,7 +625,7 @@ Campus Ambassador Program
 
 
 
-<div id="responsibilities" class="container-fluid" style="height:auto;background-color:rgb(35, 125, 160);width:103%">
+<div id="responsibilities" class="container-fluid" style="height:auto;background-color:rgb(11, 11, 29);width:103%">
 
 <br><h2 align="center" style="color:white" class="wow fadeInUp">RESPONSIBILITIES</h2><br><br>
     <section class="teamarea" >
@@ -597,57 +730,198 @@ Campus Ambassador Program
     <h1 class="rotate123" style="font-size:5.5rem"> ?</h1>
   </div>
 </div>
-<div class="row">
-<div class="col-12 align-items-center justify-content-center d-flex">
+<div class="row" style="padding-bottom:40px">
+<div class="col-12" style="padding-bottom:20px">
 
-  <ul class="nav nav-pills nav-stacked">
-    <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <p class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">PROJECTS</a>
-          </p>
-        </div>
-        <div id="collapse1" class="panel-collapse collapse">
-          <div class="panel-body">
-            <ul>
-              <li><a href="#napoli" tabindex="-1" data-toggle="tab">NAPOLI</a></li>
-              
-            </ul>
-          </div>
-        </div>
+</div>
+  <section id="section1">
+    <details  >
+      <summary>Carl Gustav Jung</summary>
+      <div>
+     
+        <p>The Swiss psychologist and psychiatrist Carl Jung was one of the major forces responsible for bringing psychological (having to do with the mind and its processes) thought and its theories into the twentieth century.</p>
       </div>
+    </details>
+    <details>
+      <summary>Sigmund Freud</summary>
+      <div>
+       
+        <p>The work of Sigmund Freud, the Austrian founder of psychoanalysis, marked the beginning of a modern, dynamic psychology by providing the first well-organized explanation of the inner mental forces determining human behavior.</p>
       </div>
-     </ul>
-</div> 
-
-<div class="col-12 align-items-center justify-content-center d-flex">
-
-  <ul class="nav nav-pills nav-stacked">
-    <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <p class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">PROJECTS</a>
-          </p>
-        </div>
-        <div id="collapse2" class="panel-collapse collapse">
-          <div class="panel-body">
-            <ul>
-              <li><a href="#napoli1" tabindex="-1" data-toggle="tab">NAPOLI1</a></li>
-              
-            </ul>
-          </div>
-        </div>
+    </details>
+    <details>
+      <summary>Alfred Adler</summary>
+      <div>
+       
+        <p>Austrian psychiatrist Alfred Adler was credited with developing several important theories on the motivation of human behavior. He founded the school of individual psychology, a comprehensive "science of living" that focuses on the uniqueness of the individual
+          and a person's relationships with society.</p>
       </div>
+    </details>
+    <details >
+      <summary>Carl Gustav Jung</summary>
+      <div>
+     
+        <p>The Swiss psychologist and psychiatrist Carl Jung was one of the major forces responsible for bringing psychological (having to do with the mind and its processes) thought and its theories into the twentieth century.</p>
       </div>
-     </ul>
-</div> 
-
+    </details>
+    <details>
+      <summary>Sigmund Freud</summary>
+      <div>
+       
+        <p>The work of Sigmund Freud, the Austrian founder of psychoanalysis, marked the beginning of a modern, dynamic psychology by providing the first well-organized explanation of the inner mental forces determining human behavior.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Alfred Adler</summary>
+      <div>
+       
+        <p>Austrian psychiatrist Alfred Adler was credited with developing several important theories on the motivation of human behavior. He founded the school of individual psychology, a comprehensive "science of living" that focuses on the uniqueness of the individual
+          and a person's relationships with society.</p>
+      </div>
+    </details>
+  </section>
 
 
 </div>
 </div>
+
+
+
+<div class="container-fluid" style="height:auto;background-color:rgb(62, 60, 60);padding-top:3vh">
+
+  <h1 style="text-align:center;color:white;font-size:2.5rem">
+    Testimonials
+  </h1>
+
+  <div id="carouselExampleIndicators" style="height:50vh" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container ">
+          <div class="row align-items-center justify-content-center d-flex" style="padding-top:10vh">
+            <div class="col-12  " style="text-align:center;color:white">
+              <h1 style="font-size:1.5rem" style="text-align:center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, natus?Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus.
+              </h1>
+              <br>
+              
+            </div>
+
+          </div>
+          <div class="row align-items-center justify-content-center d-flex" style="height:2vh">
+            
+            <div style="width:100px;height:2px;background-color:white"></div>
+             
+
+          </div>
+          <div class="row align-items-center justify-content-center d-flex" style="height:6vh">
+            
+           <h1 style="font-size:2rem;color:white">
+          Harsha Vardhan
+          </h1>
+             
+
+          </div>
+          <div class="row align-items-center justify-content-center d-flex" style="height:6vh">
+            
+            <h1 style="font-size:1.3rem;color:white">
+              Gayathri Vidhya Parishad
+           </h1>
+              
+ 
+           </div>
+ 
+
+        </div>
+      </div>
+      <div class="carousel-item">
+       <div class="container">
+         <div class="row d-flex align-items-center justify-content-center " style="padding-top:10vh;color:white" >
+           <div class="col-12" style="text-align:center">
+             <h1 style="font-size:1.5rem">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ad?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus?
+             </h1>
+           </div>
+         </div>
+       </div>
+       
+       <div class="row align-items-center justify-content-center d-flex" style="height:3vh">
+            
+        <div style="width:100px;height:2px;background-color:white"></div>
+         
+
+      </div>
+      <div class="row align-items-center justify-content-center d-flex" style="height:6vh">
+            
+        <h1 style="font-size:2rem;color:white">
+       Harsha Vardhan
+       </h1>
+          
+
+       </div>
+       <div class="row align-items-center justify-content-center d-flex" style="height:6vh">
+         
+         <h1 style="font-size:1.3rem;color:white">
+           Gayathri Vidhya Parishad
+        </h1>
+           
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row d-flex align-items-center justify-content-center" style="padding-top:10vh;color:white">
+          <div class="col-12" style="text-align:center">
+          <h1 style="font-size:1.5rem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, animi.
+          </h1>
+          </div>
+          </div>
+          <div class="row align-items-center justify-content-center d-flex" style="height:3vh">
+            
+            <div style="width:100px;height:2px;background-color:white"></div>
+             
+    
+          </div>
+          <div class="row align-items-center justify-content-center d-flex" style="height:6vh">
+            
+            <h1 style="font-size:2rem;color:white">
+           Harsha Vardhan
+           </h1>
+              
+ 
+           </div>
+           <div class="row align-items-center justify-content-center d-flex" style="height:6vh">
+             
+             <h1 style="font-size:1.3rem;color:white">
+               Gayathri Vidhya Parishad
+            </h1>
+               
+  
+            </div>
+        </div>
+
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+ 
+</div>
+  
+
+
 
 
 
@@ -685,9 +959,22 @@ new WOW().init();
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+<script>
+  var loader = document.getElementById('loader');
+  // sleep(5000);
 
+  window.addEventListener("load",function(){
+      loader.style.height ="100px";
+      loader.style.width="100px";
+      loader.style.borderRadius ="50%";
+      loader.style.visibility ="hidden";
+  });
 
+</script>
 
+<script type="text/javascript">
+  $('.carousel').carousel()
+</script>
 
      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

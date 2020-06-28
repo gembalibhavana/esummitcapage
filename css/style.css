@@ -5,7 +5,7 @@ body{
 
 }
 #incentives{
-  background-color:black;
+  background-image:url("bck.png");
   
     background-attachment:fixed;
     
@@ -39,10 +39,9 @@ text-align:center;
 
 
 #whyca{
-  background-color:rgb(14, 14, 34);
-  
-  
+  background-color:rgb(14,14,34);
 }
+
 
 .team-area{
     padding:60px 0;
@@ -86,13 +85,13 @@ text-align:center;
     position:relative;
     transform:rotateY(0deg);
     z-index:2;
-    margin-bottom:70px;
+    margin-bottom:30px;
   }
   .side-two{
     position:relative;
     transform:rotateY(0deg);
     z-index:2;
-    margin-bottom:70px;
+    margin-bottom:30px;
   }
   .side-two{
     position:absolute;
@@ -275,8 +274,9 @@ text-align:center;
 #cssmenu.small-screen #menu-indicator {
   display: none;
 }
-
-*{
-overflow-horizontal:hidden;}
+.question {
+  cursor: pointer;
+  color: #f00;
+}
 
 
