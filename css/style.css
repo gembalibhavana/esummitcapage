@@ -89,6 +89,15 @@ body {
   color: #fff;
 }
 
+#test{
+  background-image: url("img/v748-toon-121_1_1.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+ 
+
+}
+
 summary {
   display: block;
   cursor: pointer;
