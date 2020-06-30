@@ -519,9 +519,9 @@ background:linear-gradient(315deg,#047de7,#9b8eff9a);
 
 #container-fluid{
   margin:0;
-  padding:0;
+  padding-top:3vh;
   min-height:60vh;
-  background:#333;
+  background:rgb(6, 6, 35);
   overflow-x: hidden;
   justify-content:center;
   align-items:center;
@@ -540,7 +540,7 @@ background:linear-gradient(315deg,#047de7,#9b8eff9a);
 }
 .container-fluid .card2 .face.face1{
   position:relative;
-  background:#333;
+  background:#061d2e;
   display:flex;
   justify-content:center;
   align-items:center;
