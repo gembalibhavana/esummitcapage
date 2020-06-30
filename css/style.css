@@ -101,7 +101,7 @@ body {
 summary {
   display: block;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
  
   font-size: 22px;
   transition: .3s;
@@ -115,7 +115,7 @@ details > div {
   overflow: auto;
 
   user-select: none;
-  padding: 0 20px;
+  padding: 0 10px;
   font-family:  sans-serif;
   line-height: 1.5;
 }
@@ -228,7 +228,7 @@ text-align:center;
 
 }
 #header{
-  background-image:url("img/image.png");
+  background-image:url("img/image5.png");
   
   
   
