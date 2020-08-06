@@ -94,6 +94,7 @@ body {
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
+  
  
 
 }
@@ -103,7 +104,7 @@ summary {
   cursor: pointer;
   padding: 5px;
  
-  font-size: 22px;
+  font-size: 17px;
   transition: .3s;
   border-bottom: 1px solid;
   user-select: none;
@@ -184,8 +185,6 @@ details[open] > summary {
     opacity: 1;
   }
 }
-
-
 
 .accordion .card {
   border: none;
@@ -516,7 +515,7 @@ background:linear-gradient(315deg,#047de7,#9b8eff9a);
   position:relative;
 }
 .container-fluid .card2 .face{
-  width:300px;
+  width:250px;
   height:200px;
   transition:0.5s;
 
@@ -571,4 +570,12 @@ background:linear-gradient(315deg,#047de7,#9b8eff9a);
   color:#fff;
   text-align:center;
   font-size:1.5em;
+}
+
+@media only screen and (max-width: 280px) {
+
+  body,#test,#aboutus,#header { 
+     font-size: 1em; 
+  }
+
 }
