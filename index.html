@@ -4,29 +4,149 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-    
+
+
         <link rel="stylesheet" href="css/animate.css">
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script  src="js/script.js"></script>
- 
-    <title>campus ambassador program 
-	
+
+    <title>campus ambassador program
+
 
 
 	</title>
+  <style>
+    body {
+      background-color: #212333;
+      display: grid;
+      place-content: center;
+      height:100vh;
+      overflow: hidden;
+    }
+    #out {
+      display: grid;
+      place-content: center;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      animation: wave 1.5s ease-in-out infinite alternate;
+    }
+    #in {
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: inset 5px 5px 5px #151722, inset -5px -5px 10px #25283b;
+      animation: wave2 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes wave {
+      from {
+        width: 200px;
+        height: 200px;
+        box-shadow: 5px 5px 5px #151722, -5px -5px 10px #25283b;
+        /* opacity: 1; */
+        /* filter: blur(0px); */
+      }
+      to {
+        width: 500px;
+        height: 500px;
+        box-shadow: 5px 5px 100px #151722, -5px -5px 100px #25283b;
+        /* opacity: 0; */
+        /* filter: blur(2px); */
+      }
+    }
+    @keyframes wave2 {
+      from {
+        width: 200px;
+        height: 200px;
+        box-shadow: inset 5px 5px 5px #151722, inset -5px -5px 10px #25283b;
+        /* opacity: 1; */
+        /* filter: blur(0px); */
+      }
+      to {
+        width: 500px;
+        height: 500px;
+        /* opacity: 0; */
+        box-shadow: inset 5px 5px 100px #151722, inset -5px -5px 100px #25283b;
+        /* filter: blur(2px); */
+      }
+    }
+    @keyframes wavef {
+      from {
+        width: 200px;
+        height: 200px;
+        box-shadow: 5px 5px 5px #151722, -5px -5px 10px #25283b;
+        /* opacity: 1; */
+        /* filter: blur(0px); */
+      }
+      to {
+        width: 700px;
+        height: 700px;
+        box-shadow: 5px 5px 100px #151722, -5px -5px 100px #25283b;
+        /* opacity: 0; */
+        /* filter: blur(2px); */
+      }
+    }
+    @keyframes wave2f {
+      from {
+        width: 200px;
+        height: 200px;
+        box-shadow: inset 5px 5px 5px #151722, inset -5px -5px 10px #25283b;
+        /* opacity: 1; */
+        /* filter: blur(0px); */
+      }
+      to {
+        width: 700px;
+        height: 700px;
+        /* opacity: 0; */
+        box-shadow: inset 5px 5px 100px #151722, inset -5px -5px 100px #25283b;
+        /* filter: blur(2px); */
+      }
+    }
 
-    </head>
+    .image {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <script>
+    var timer = Date.now();
 
-    <body>
+    function stopLoader(){
+      var time = 3000 - (Date.now()-timer)%3000;
+      setTimeout(function(){
+        document.getElementById('in').style.animation = "wave2f 1.5s ease-out 1 forwards";
+        document.getElementById('out').style.animation = "wavef 1.5s ease-out 1 forwards";
+        setTimeout(function(){
+          document.body.style.height="100%";
+          document.body.style.overflowY="auto";
+          document.getElementById('out').style.display="none";
+          document.getElementById('page').style.display="block";
+          new WOW().init();
+        },1500)
+      },time);
+    }
+  </script>
+</head>
 
-    
+    <body onload="stopLoader();">
+
+      <div id="out">
+        <div id="in">
+          <div class="logo">
+            <img class="image" src="Logo.png" />
+          </div>
+        </div>
+      </div>
+    <div id="page" style="display:none;">
 
 <div class="d-block d-xl-none">
   <nav class="navbar navbar-dark navbar-expand-lg  fixed-top">
@@ -45,12 +165,12 @@
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="#test">Testimonials</a></li>
           <li class="nav-item"><a class="nav-link" href="#cont">Contact Us</a></li>
-      </ul>      
-    </div>    
+      </ul>
+    </div>
   </div>
 </nav>
 </div>
-    
+
 
 
 
@@ -59,8 +179,8 @@
 <div id='cssmenu'>
 <ul >
    <li id="er"><img src="css/img/logo_bg.png" style="height:7vh;width:170px" ></li>
-   <li  class="wow slideInLeft" animation-duration="1s" animation-delay="1s"  class='active'><a href='#saga'>Home</a></li>
-   <li   class="wow slideInLeft" animation-duration="1s" animation-delay="2s"><a href='#aboutus'>About Us</a></li>
+   <li  class="wow slideInLeft" animation-duration="1s" animation-delay="1s" class='active'><a href='#saga'>Home</a></li>
+   <li   class="wow slideInLeft" animation-duration="1s" animation-delay="2s"  ><a href='#aboutus'>About Us</a></li>
    <li  class="wow slideInLeft" animation-duration="1s" animation-delay="3s"><a href='#whyca'>Why Ca?</a></li>
    <li  class="wow slideInLeft" animation-duration="1s" animation-delay="4s"><a href='#incentives'>Incentives</a></li>
    <li  class="wow slideInLeft" animation-duration="1s" animation-delay="5s"><a href='#container-fluid'>Responsibilities</a></li>
@@ -73,7 +193,7 @@
 </div>
 
 
-<div class="overlay header" id="saga" style="height:auto;background-color:black;opacity:0.5">
+<div class="overlay header "  id="saga" style="height:auto;background-color:black;opacity:0.5">
   <div class="container-fluid d-block d-md-none  align-items-center justify-content-center" id="header" style="color:white;width:100%;height:80vh">
     <div class="row " style="padding-top:20vh">
       <div class="col-12 d-flex align-items-center justify-content-center">
@@ -81,7 +201,7 @@
           E-Summit'21
         </h1>
       </div>
-      
+
     </div>
     <div class="row">
       <div class="col-12 d-flex align-items-center justify-content-center">
@@ -94,7 +214,7 @@
       <div class="col-12 d-flex align-items-center justify-content-center">
         <button style="background-color:black;font-size:25px;border-radius: 40px; color:white; border: 1px solid white;">
           <img src="css/img/Facebook-Icon-PNG.png" style="height: 50px;width:50px;">&nbsp;Login with Facebook&nbsp;</button>
-          
+
       </div>
     </div>
   </div>
@@ -104,13 +224,13 @@
 
 
 
-<div class="header d-none d-md-block" id="header" style="width:100%;height:100vh;color:white">
-<div class="container-fluid"style="heigth:90vh;width:100%">
+<div class="header d-none d-md-block " id="header" style="width:100%;height:100vh;color:white">
+<div class="container-fluid" id="saga" style="heigth:90vh;width:100%">
 <div class="row" style="height:100vh">
 <div class="col-md-7 ">
 
 </div>
-<div class=" col-12 col-md-5 d-none d-md-block "  id= "saga" style="background-color:black;opacity:0.7;padding-top:45vh">
+<div class=" col-12 col-md-5 d-none d-md-block " style="background-color:black;opacity:0.7;padding-top:45vh">
 
 <h1 style="font-family:Arial, Helvetica, sans-serif">
 E-Summit'21
@@ -122,7 +242,6 @@ Campus Ambassador Program
 <br><button style="background-color:black;font-size:25px;border-radius: 40px; color:white; border: 1px solid white;">
 <img src="css/img/Facebook-Icon-PNG.png" style="height: 50px;width:50px;font-family: Arial, Helvetica, sans-serif;">&nbsp;Login with Facebook&nbsp;</button>
 
-</div>
 </div>
 </div>
 </div>
@@ -139,27 +258,27 @@ Campus Ambassador Program
             </div>
           </div>
           <div class="row justify-content-center" style="padding-top:3vh;padding-bottom:10vh;padding-right:3vw;padding-left:3vw">
-          
+
             <div class=" col-12 col-md-7 " style="text-align: center;font-size: 1.2rem">
                <p class="wow bounceInDown" animation-duration="3s">The Entrepreneurship Cell is a non-profit organization run by the students of IIT Bhubaneswar
-                that aims at manifesting the latent entrepreneurial spirit of the young students from all corners of India.  
+                that aims at manifesting the latent entrepreneurial spirit of the young students from all corners of India.
                </p>
-               
+
                <p class="wow bounceInUp" animation-duration="3s">
-                Keeping this motto in mind the E-Cell, IIT Bhubaneswar is reaching out to all the colleges across India to promote 
+                Keeping this motto in mind the E-Cell, IIT Bhubaneswar is reaching out to all the colleges across India to promote
                 entrepreneurial outlook among students by engaging them with different activities of the E-Cell, IIT Bhubaneswar.
                </p>
-               
+
             </div>
         </div>
 
 
-  
 
 
-   
-        
-       
+
+
+
+
 
 <div class="container-fluid"  id="whyca" style="width:104%;padding-top:5%;padding-bottom:5%;padding-left:3%;height:auto">
 <h2 class="wow swing" animation-duration="3s" style="font-family:Arial, Helvetica, sans-serif">WHY CA?</h2><br><br>
@@ -182,11 +301,11 @@ Campus Ambassador Program
                   <div class="side-two">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        
+
                         <p>
-                         <br> Get a certificate of appreciation from The E-Summit IIT Bhubaneswar on successfully completing the tenure. 
+                         <br> Get a certificate of appreciation from The E-Summit IIT Bhubaneswar on successfully completing the tenure.
                         </p>
-                       
+
                       </div>
                     </div>
                   </div>
@@ -209,19 +328,19 @@ Campus Ambassador Program
                   <div class="side-two">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        
+
                         <p>
-                          <br>Get a chance to represent your college in the three day event of E-Summit’20. 
+                          <br>Get a chance to represent your college in the three day event of E-Summit’20.
                         </p>
-                       
+
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-           
-           
+
+
             <div class="col-xs-12 col-sm-6 col-lg-3">
               <div class="team-single">
                 <div class="content-area">
@@ -230,8 +349,8 @@ Campus Ambassador Program
                       <div class="card-body text-center">
                         <div class="img-area">
                           <img src="css/img/whyca4.png" style="height:150px;width:150px" alt="">
-                         
-                          
+
+
                         </div>
                         <h4>Skill development </h4>
                       </div>
@@ -240,11 +359,11 @@ Campus Ambassador Program
                   <div class="side-two">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        
+
                         <p>
                           <br>Improve your communication, management and leadership skills by organizing our events in your campus
                         </p>
-                        
+
                       </div>
                    </div>
                   </div>
@@ -259,8 +378,8 @@ Campus Ambassador Program
                       <div class="card-body text-center">
                         <div class="img-area">
                           <img src="css/img/whyca3.png"  style="height:150px;width:150px" alt="">
-                         
-                        
+
+
                         </div>
                         <h4>Engage with Entrepreneurs </h4>
                       </div>
@@ -269,22 +388,22 @@ Campus Ambassador Program
                   <div class="side-two">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        
+
                         <p>
                           <br>Get an opportunity to meet and attend the talks of eminent entrepreneurs
                         </p>
-                       
+
                       </div>
                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>  
+          </div>
           </div>
         </div>
       </section>
-                 
+
     </div>
 
 
@@ -297,84 +416,74 @@ Campus Ambassador Program
 
 <div id="incentives" class="container-fluid" style="height:auto;background-color:rgb(11, 11, 29);width:103%">
 
-  <br><h2 align="center" style="color:white" class="wow fadeInUp">Incentives</h2><br><br>
+  <br><h2 align="center" style="color:white" class="wow fadeInUp" data-wow-duration="1s">Incentives</h2><br><br>
       <section class="teamarea" >
           <div class="container">
             <div class="row justify-content-center ">
-              
+
              <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left:4vw;padding-right:4vw">
                 <div class="team-single">
                   <div class="content-area">
                     <div class="side-one"  style="transform: skew(-0.2deg);">
                       <div class="card wow bounceInLeft card3" id="card1" >
                         <div class="card-body text-center" style="color:white">
-                         
-                          <h4>Certificate</h4><br>
-                         <p>Certificate of appreciation for all Campus Ambassadors as per 10th Jan 2019.
 
-
-                        </p>
+                          <h4>PUBLICIZE</h4><br>
+                         <p>Publicize E-Summit’21 in your college by putting up our posters on the notice boards of your college. </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-  
+
               <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left:4vw;padding-right:4vw">
                  <div class="team-single">
                   <div class="content-area">
                     <div class="side-one" style="transform: skew(-0.2deg);" >
    <div class="card wow bounceInLeft card3" id="card1">
                         <div class="card-body text-center" style="color:white">
-                        
-                            <h4>Goodies and merchandise
-                            </h4><br>
-                         
-                         
-                          <p>
-                            Exciting goodies and merchandise for top 20 Campus Ambassadors based on their performance.
-                            
-                            
-                          </p>
+
+                            <h4>COMMUNICATE</h4><br>
+
+
+                          <p>Share and publicize the events and posters of E-Summit’21 in all forms of social media.</p>
                         </div>
                       </div>
                     </div>
   </div></div></div>
-                   
-             
+
+
               <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left:4vw;padding-right:4vw">
                 <div class="team-single">
                   <div class="content-area">
                     <div class="side-one" style="transform: skew(-0.2deg);" >
                       <div class="card wow bounceInRight card3" id="card1"  >
                         <div class="card-body text-center" style="color:white">
-                         
-                          <h4>Get Passes </h4> <br>  
+  <h4>Get Passes </h4> <br>  
    <p>Free pass for any one of the competitions of E-Summit’20 for top 30 Campus Ambassadors based on their performance.
 
   </p>
                       </div>
                       </div>
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
-  
-         
-            </div>  
+
+
+            </div>
 
             <div class="row justify-content-center " style="margin-top:5vw">
-              
+
               <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left:4vw;padding-right:4vw">
                  <div class="team-single">
                    <div class="content-area">
                      <div class="side-one"  style="transform: skew(-0.2deg);">
                        <div class="card wow bounceInLeft card3" id="card1">
                          <div class="card-body text-center" style="color:white">
-                         
-                             <h4>Interaction with speakers</h4><br>
+                          <h4>Interaction with speakers</h4><br>
                             
                           
                           <p>Any Campus Ambassador attending the three-day event E-Summit’20 can get an opportunity to interact with speakers based on statement of purpose. </p>
@@ -384,168 +493,167 @@ Campus Ambassador Program
                    </div>
                  </div>
                </div>
-   
+
                <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left:4vw;padding-right:4vw">
                   <div class="team-single">
                    <div class="content-area">
                      <div class="side-one" style="transform: skew(-0.2deg);" >
     <div class="card wow bounceInLeft card3" id="card1">
                          <div class="card-body text-center" style="color:white">
-                         
-                             <h4>Internship opportunity</h4><br>
+
+                          <h4>Internship opportunity</h4><br>
                             
                          
-                           <p>Grab the opportunity of an internship by being one of the  top 20 Campus Ambassadors</p>
+                          <p>Grab the opportunity of an internship by being one of the  top 20 Campus Ambassadors</p>
                          </div>
                        </div>
                      </div>
    </div></div></div>
-                    
-              
+
+
                <div class="col-xs-12 col-sm-6 col-md-4" style="padding-left:4vw;padding-right:4vw">
                  <div class="team-single">
                    <div class="content-area">
                      <div class="side-one" style="transform: skew(-0.2deg);" >
                        <div class="card wow bounceInRight card3" id="card1" style="color:white" >
                          <div class="card-body text-center">
-                           
-                           <h4>Exclusive courses </h4> <br>
-    <p>Access to twenty exclusive courses will be  provided to the top performing Campus Ambassadors.</p>
+                          <h4>Exclusive courses </h4> <br>
+                          <p>Access to twenty exclusive courses will be  provided to the top performing Campus Ambassadors.</p>
                        </div>
                        </div>
                      </div>
-                     
+
                    </div>
                  </div>
                </div>
-   
-               
-   
+
+
+
                </div>
-             </div>  
+             </div>
 
             </div>
-          </div>
-        </section>
-  
-  </div>
 
 
 
- <div class="container-fluid" id="container-fluid"  >
-   <div class="row " style="color:white;height:10vh" >
-<div class="col-12 d-flex align-items-center justify-content-center">
-  <h1>Responsibilities</h1>
-</div>
-   </div>
-       <div class="row ">
-         <div class="col-12 col-sm-6 col-lg-3  d-flex align-items-center justify-content-center" >
-          <div class="card2" >
-            <div class="face face1">
-              <div class="content1" style="align-items:center">
-                <img  src="css/img/public.png">
-                <h3>
-                  Publicize
-                </h3>
+            <div class="container-fluid" id="container-fluid"  >
+              <div class="row " style="color:white;height:10vh" >
+           <div class="col-12 d-flex align-items-center justify-content-center">
+             <h1 class=" wow fadeInUp" data-wow-duration="1s">Responsibilities</h1>
+           </div>
               </div>
-            </div>
-            <div class="face face2">
-              <p>Publicize E-Summit’21 in your college by putting up our posters on the notice boards of your college. </p>
-            </div>
-          </div>
-         </div>
-         <div class="col-12 col-sm-6 col-lg-3  d-flex align-items-center justify-content-center" >
-          <div class="card2" >
-            <div class="face face1">
-              <div class="content1">
-                <img  src="css/img/communication2.png">
-                <h3>
-                  Communicate
-                </h3>
-              </div>
-            </div>
-            <div class="face face2">
-              <p>Share and publicize the events and posters of E-Summit’21 in all forms of social media.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center" >
-          <div class="card2" >
-            <div class="face face1">
-              <div class="content1">
-                <img style="align-items:center" src="css/img/Orchestrate.png">
-                <h3 style="text-align:center">
-                  Orchestrate
-                </h3>
-              </div>
-            </div>
-            <div class="face face2">
-              <p>Plan and organize an event called Entrepreneurial Ideation in your campus with support of team E-Summit’21.</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-12 col-sm-6 col-lg-3  d-flex align-items-center justify-content-center" >
-          <div class="card2" >
-            <div class="face face1">
-              <div class="content1">
-                <img  src="css/img/promote.png">
-                <h3>
-                  Promote
-                </h3>
-              </div>
-            </div>
-            <div class="face face2">
-              <p>Ensure enthusiastic participation of your college in the three-day event E-Summit’21.</p>
-            </div>
-          </div>
-        </div>
-      </div> 
-     </div>
+                  <div class="row ">
+                    <div class="col-12 col-sm-6 col-lg-3  d-flex align-items-center justify-content-center" >
+                     <div class="card2 wow slideInLeft" data-wow-duration="1s" >
+                       <div class="face face1">
+                         <div class="content1" style="align-items:center">
+                           <img  src="css/img/public.png">                        
+                           <h3>
+                             Publicize
+                           </h3>
+                         </div>
+                       </div>
+                       <div class="face face2">
+                         <p>Publicize E-Summit’21 in your college by putting up our posters on the notice boards of your college. </p>
+                       </div>
+                     </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3  d-flex align-items-center justify-content-center" >
+                     <div class="card2 wow slideInLeft" data-wow-duration="1s" >
+                       <div class="face face1">
+                         <div class="content1">
+                           <img  src="css/img/communication2.png">
+                           <h3>
+                             Communicate
+                           </h3>
+                         </div>
+                       </div>
+                       <div class="face face2">
+                         <p>Share and publicize the events and posters of E-Summit’21 in all forms of social media.</p>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-center justify-content-center" >
+                     <div class="card2 wow slideInRight" data-wow-duration="1s">
+                       <div class="face face1">
+                         <div class="content1">
+                           <img style="align-items:center" src="css/img/Orchestrate.png">
+                           <h3 style="text-align:center">
+                             Orchestrate
+                           </h3>
+                         </div>
+                       </div>
+                       <div class="face face2">
+                         <p>Plan and organize an event called Entrepreneurial Ideation in your campus with support of team E-Summit’21.</p>
+                       </div>
+                     </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3  d-flex align-items-center justify-content-center" >
+                     <div class="card2 wow slideInRight" data-wow-duration="1s" >
+                       <div class="face face1">
+                         <div class="content1">
+                           <img  src="css/img/promote.png">
+                           <h3>
+                             Promote
+                           </h3>
+                         </div>
+                       </div>
+                       <div class="face face2">
+                         <p>Ensure enthusiastic participation of your college in the three-day event E-Summit’21.</p>
+                       </div>
+                     </div>
+                   </div>
+                 </div> 
+                </div>
+           
+           
+           <div  id="faq" class="container-fluid " style =" height:auto;width:104%;background-color:rgb(14, 13, 12)">
+           <div class="row" >
+             <div class="col-12 justify-content-center d-flex align-items-center" style="height:15vh;background-color:rgb(14, 13, 12);color:white">
+               <h1 style="font-size:3rem" class="wow fadeInUp" data-wow-duration="1s">
+                 FAQ
+               </h1>
+               
+               
+               <h1 class="rotate123" style="font-size:4.5rem"> ?</h1>
+             </div>
+           </div>
+           <div class="row" style="padding-bottom:40px">
+           <div class="col-12" style="padding-bottom:20px">
+           
+           </div>
+             <section id="section1" style="padding-left:5vw;padding-right:5vw;align-items: center;">
+               
+               <details >
+                 <summary class="wow fadeInUp" data-wow-duration="1s">How will we be informed about various updates and posts?</summary>
+                 <div>
+                
+                   <p>Information regarding the various posts and updates will be provided through socail media and Whatsapp groups.</p>
+                 </div>
+               </details>
+               <details>
+                 <summary class="wow fadeInUp" data-wow-duration="1s">How will I benefit from being a Campus Ambassador?</summary>
+                 
+                 <div>
+                  
+                   <p>By being a CAmpus Ambassador, one gets the chance of gaining experience in dealing a lot of students, which helps in developing management skills. On successful completion of the program, the top performing Campus Ambassadors will be given certificate and incentives.</p>
+                 </div>
+               </details>
+               <details>
+                 <summary class="wow fadeInUp" data-wow-duration="1s">What are the works of a Campus Ambassador?</summary>
+                 <div>
+                  
+                   <p>The responsibility of a Campus Ambassador is to publicize the various posts and updates ,promote participation in the events , from their college. </p>
+                 </div>
+               </details>
+             </section>
+           
+           
+           </div>
+           </div>
+           
 
 
-<div  id="faq" class="container-fluid" style =" height:auto;width:104%;background-color:rgb(14, 13, 12)">
-<div class="row" >
-  <div class="col-12 justify-content-center d-flex align-items-center" style="height:15vh;background-color:rgb(14, 13, 12);color:white">
-    <h1 style="font-size:3rem">
-      FAQ
-    </h1>
-    
-    
-    <h1 class="rotate123" style="font-size:4.5rem"> ?</h1>
-  </div>
-</div>
-<div class="row" style="padding-bottom:40px">
-<div class="col-12" style="padding-bottom:20px">
-
-</div>
-  <section id="section1" style="padding-left:5vw;padding-right:5vw;align-items: center;">
-    
-    <details >
-      <summary>How will we be informed about various updates and posts?</summary>
-      <div>
-     
-        <p>Information regarding the various posts and updates will be provided through socail media and Whatsapp groups.</p>
-      </div>
-    </details>
-    <details>
-      <summary>How will I benefit from being a Campus Ambassador?</summary>
-      <div>
-       
-        <p>By being a CAmpus Ambassador, one gets the chance of gaining experience in dealing a lot of students, which helps in developing management skills. On successful completion of the program, the top performing Campus Ambassadors will be given certificate and incentives.</p>
-      </div>
-    </details>
-    <details>
-      <summary>What are the works of a Campus Ambassador?</summary>
-      <div>
-       
-        <p>The responsibility of a Campus Ambassador is to publicize the various posts and updates ,promote participation in the events , from their college. </p>
-      </div>
-    </details>
-  </section>
-
-
-</div>
-</div>
 
 
 <div class="container-fluid" id="test" style="height:auto">
@@ -570,33 +678,33 @@ Campus Ambassador Program
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, natus?Lorem ipsum dolor sit Lorem ipsum dolor sit amet
               </h1>
               <br>
-              
+
             </div>
 
           </div>
           <div class="row align-items-center justify-content-center d-flex" style="height:2vh">
-            
+
             <div style="width:100px;height:2px;background-color:white"></div>
-             
+
 
           </div>
           <div class="row align-items-center justify-content-center d-flex" style="height:5vh">
-            
+
            <h1 style="font-size:2rem;color:white">
           Harsha Vardhan
           </h1>
-             
+
 
           </div>
           <div class="row align-items-center justify-content-center d-flex" style="height:5vh">
-            
+
             <h1 style="font-size:1.3rem;color:white">
               Gayathri Vidhya Parishad
            </h1>
-              
- 
+
+
            </div>
- 
+
 
         </div>
       </div>
@@ -610,27 +718,27 @@ Campus Ambassador Program
            </div>
          </div>
        </div>
-       
+
        <div class="row align-items-center justify-content-center d-flex" style="height:3vh">
-            
+
         <div style="width:100px;height:2px;background-color:white"></div>
-         
+
 
       </div>
       <div class="row align-items-center justify-content-center d-flex" style="height:5vh">
-            
+
         <h1 style="font-size:2rem;color:white">
        Harsha Vardhan
        </h1>
-          
+
 
        </div>
        <div class="row align-items-center justify-content-center d-flex" style="height:4vh">
-         
+
          <h1 style="font-size:1.3rem;color:white">
            Gayathri Vidhya Parishad
         </h1>
-           
+
 
         </div>
       </div>
@@ -644,26 +752,26 @@ Campus Ambassador Program
           </div>
           </div>
           <div class="row align-items-center justify-content-center d-flex" style="height:3vh">
-            
+
             <div style="width:100px;height:2px;background-color:white"></div>
-             
-    
+
+
           </div>
           <div class="row align-items-center justify-content-center d-flex" style="height:5vh">
-            
+
             <h1 style="font-size:2rem;color:white">
            Harsha Vardhan
            </h1>
-              
- 
+
+
            </div>
            <div class="row align-items-center justify-content-center d-flex" style="height:5vh">
-             
+
              <h1 style="font-size:1.3rem;color:white">
                Gayathri Vidhya Parishad
             </h1>
-               
-  
+
+
             </div>
         </div>
 
@@ -679,13 +787,11 @@ Campus Ambassador Program
     </a>
   </div>
 
- 
-</div>
-  
 
 </div>
 
 
+</div>
 
 <div class="container-fluid"  id="cont" style=" background-color:black;width:100%;height:auto;padding-left:5vw;z-index:1000">
 
@@ -729,7 +835,7 @@ Campus Ambassador Program
         
       </div>
   </div>
-<div class="row  justify-content-center" style="padding:bottom:3vh;padding-top:10vh">
+<div class="row  justify-content-center" style="padding-bottom:3vh;padding-top:10vh">
   
 
 
@@ -761,13 +867,6 @@ Campus Ambassador Program
 
 
 <script src="js/wow.min.js"></script>
-<script>
-new WOW().init();
-</script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
 
 <script type="text/javascript">
   $('.carousel').carousel()
