@@ -134,10 +134,22 @@
         },1500)
       },time);
     }
+
+    function scroller(){
+      var s=window.scrollY;
+      if(s===0)
+      {
+        document.getElementById('cssmenu').style.backgroundColor="transparent";
+      }
+      else
+      {
+        document.getElementById('cssmenu').style.backgroundColor="rgba(0,0,0,0.5)";
+      }
+    }
   </script>
 </head>
 
-    <body onload="stopLoader();">
+    <body onload="stopLoader();" onscroll="scroller()">
 
       <div id="out">
         <div id="in">
@@ -148,7 +160,7 @@
       </div>
     <div id="page" style="display:none;">
 
-<div class="d-block d-xl-none">
+<div class="d-block d-xl-none" id="first-div">
   <nav class="navbar navbar-dark navbar-expand-lg  fixed-top">
     <div class="container" style="font-family:Arial, Helvetica, sans-serif;font-weight: 700;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" >
@@ -176,10 +188,9 @@
 
 
 <div class="container-fluid d-none d-xl-block" style="position:fixed;z-index:2;width:100vw;font-weight:700;font-family:Arial, Helvetica, sans-serif">
-<div id='cssmenu'>
-<ul  >
-   <li id="er" ><img src="css/img/logo_bg.png" style="height:7vh;width:150px" ></li>
-   <li  class="wow slideInLeft active" animation-duration="1s" animation-delay="1s"  ><a href='#saga'>Home</a></li>
+<div id='cssmenu' style="background-color: transparent;">
+<ul>
+  <li  class="wow slideInLeft active" animation-duration="1s" animation-delay="1s"  ><a href='#saga'>Home</a></li>
    <li   class="wow slideInLeft" animation-duration="1s" animation-delay="2s"  ><a href='#aboutus'>About Us</a></li>
    <li  class="wow slideInLeft" animation-duration="1s" animation-delay="3s"><a href='#whyca'>Why Ca?</a></li>
    <li  class="wow slideInLeft" animation-duration="1s" animation-delay="4s"><a href='#incentives'>Incentives</a></li>
@@ -187,6 +198,7 @@
    <li   class="wow slideInLeft" animation-duration="1s"  animation-delay="6s"><a href='#faq'>FAQ</a></li>
    <li  class="wow slideInLeft" animation-duration="1s" animation-delay="4s"><a href='#test'>Testimonials</a></li>
    <li  class="wow slideInLeft" animation-duration="1s" animation-delay="5s"><a href='#cont'>Contact Us</a></li>
+   <li id="er" ><img src="css/img/logo.png" style="height:7vh;width:7vh;" ></li>
 
 </ul>
 </div>
