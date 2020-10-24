@@ -557,7 +557,45 @@ h2 {
   text-align: center;
   font-size: 1.5em;
 }
+.getintouch{
+width:60%;
+max-width:450px;
+margin:auto;
+margin-top:10px;	
+padding:30px 40px;
+box-sizing:border-box;
+border-radius:8px;
+text-align:center;
+box-shadow:00 20px #000000b3;
+font-family:
+}
 
+.txt{
+border:1px solid gray;
+margin: 8px 0;
+padding:12px 18px;
+border-radius:8px;
+color:#ddd;
+}
+
+.txt input,.txt textarea{
+width:100%;
+font-size:18px;
+margin-top:1px;
+background:none;
+outline:none;
+border:none;
+color:#ddd;
+}
+ .btn{
+display:inline-block;
+background:#d9d9d9;
+color:white;
+padding:10px 0;
+margin-top:10px;
+width:30%;
+font-weight:800;
+}
 @media only screen and (max-width: 280px) {
   body,
   #test,
