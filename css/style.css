@@ -589,12 +589,13 @@ color:#ddd;
 }
  .btn{
 display:inline-block;
-background:#d9d9d9;
+background:#141414;
 color:white;
 padding:10px 0;
 margin-top:10px;
 width:30%;
 font-weight:800;
+border: solid 2px white;
 }
 @media only screen and (max-width: 280px) {
   body,
