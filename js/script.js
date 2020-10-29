@@ -137,3 +137,59 @@ function() {
 
 });
 })(jQuery);
+
+function showmessage(){
+  document.getElementById("response").innerHTML="Submitting...";
+}
+function scroll_active(){
+  var scrolled=window.scrollY;
+  var dist=0.4*window.innerHeight;
+  var aboutus=document.getElementById('aboutus').offsetTop-dist;
+  var whyca=document.getElementById('whyca').offsetTop-dist;
+  var incen=document.getElementById('incentives').offsetTop-dist;
+  var respo=document.getElementById('container-fluid').offsetTop-dist;
+  var faq=document.getElementById('faq').offsetTop-dist;
+  var test=document.getElementById('test').offsetTop-dist;
+  var cont=document.getElementById('cont').offsetTop;
+  cont1=test + 0.7*window.innerHeight;
+  if(scrolled < aboutus)
+  {
+    change_active(0,0);
+    change_active(0,1);
+  }
+  if(scrolled > aboutus && scrolled < whyca)
+  {
+    change_active(1,0);
+    change_active(1,1);
+  }
+  if(scrolled > whyca && scrolled < incen)
+  {
+    change_active(2,0);
+    change_active(2,1);
+  }
+  if(scrolled > incen && scrolled < respo)
+  {
+    change_active(3,0);
+    change_active(3,1);
+  }
+  if(scrolled >respo && scrolled < faq)
+  {
+    change_active(4,0);
+    change_active(4,1);
+  }
+  if(scrolled >faq && scrolled < test)
+  {
+    change_active(5,0);
+    change_active(5,1);
+  }
+  if(scrolled > test && scrolled < cont)
+  {
+    change_active(6,0);
+    change_active(6,1);
+  }
+  if(scrolled > cont1 )
+  {
+    change_active(7,0);
+    change_active(7,1);
+  }
+}
