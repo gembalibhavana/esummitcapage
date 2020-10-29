@@ -15,7 +15,6 @@
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script  src="js/script.js"></script>
-
     <title>campus ambassador program
 
 
@@ -158,8 +157,11 @@
       }
     }
 
-    function change_active(num){
-      var x=document.getElementsByClassName('navChange');
+    function change_active(num,type){
+      if(type==1)
+        var x=document.getElementsByClassName('navChange');
+      else 
+        var x=document.getElementsByClassName('navChange2');
       for(i=0;i<8;i++)
       {
         x[i].classList.remove('active');
@@ -169,7 +171,7 @@
   </script>
 </head>
 
-    <body onload="stopLoader();" onscroll="scroller()">
+    <body onload="stopLoader();" onscroll="scroller(),scroll_active()">
 
       <div id="out">
         <div id="in">
@@ -189,14 +191,14 @@
        <a class="navbar-brand" href="#">ES'21 CA program</a>
        <div class="collapse navbar-collapse" id="Navbar">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="nav-link" href="#saga">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#whyca">Why Ca</a></li>
-          <li class="nav-item"><a class="nav-link" href="#incentives">Incentives</a></li>
-          <li class="nav-item"><a class="nav-link" href="#container-fluid">Responsibilities</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#test">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cont">Contact Us</a></li>
+          <li class="nav-item active navChange2" onclick="change_active(0,0)"><a class="nav-link" href="#saga">Home</a></li>
+          <li class="nav-item navChange2" onclick="change_active(1,0)"><a class="nav-link" href="#aboutus">About Us</a></li>
+          <li class="nav-item navChange2" onclick="change_active(2,0)"><a class="nav-link" href="#whyca">Why Ca</a></li>
+          <li class="nav-item navChange2" onclick="change_active(3,0)"><a class="nav-link" href="#incentives">Incentives</a></li>
+          <li class="nav-item navChange2" onclick="change_active(4,0)"><a class="nav-link" href="#container-fluid">Responsibilities</a></li>
+          <li class="nav-item navChange2" onclick="change_active(5,0)"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item navChange2" onclick="change_active(6,0)"><a class="nav-link" href="#test">Testimonials</a></li>
+          <li class="nav-item navChange2" onclick="change_active(7,0)"><a class="nav-link" href="#cont">Contact Us</a></li>
       </ul>
     </div>
   </div>
@@ -210,14 +212,14 @@
 <div class="container-fluid d-none d-xl-block" style="position:fixed;z-index:2;width:100vw;font-weight:700;font-family:Arial, Helvetica, sans-serif">
 <div id='cssmenu' style="background-color: transparent;">
 <ul>
-  <li  class="wow slideInLeft navChange active" style="padding-left:2vw" animation-duration="1s" animation-delay="1s" onclick="change_active(0)"><a href='#saga'>Home</a></li>
-   <li   class="wow slideInLeft navChange" animation-duration="1s" animation-delay="2s" onclick="change_active(1)"><a href='#aboutus'>About Us</a></li>
-   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="3s" onclick="change_active(2)"><a href='#whyca'>Why Ca?</a></li>
-   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="4s" onclick="change_active(3)"><a href='#incentives'>Incentives</a></li>
-   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="5s" onclick="change_active(4)"><a href='#container-fluid'>Responsibilities</a></li>
-   <li   class="wow slideInLeft navChange" animation-duration="1s"  animation-delay="6s" onclick="change_active(5)"><a href='#faq'>FAQ</a></li>
-   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="4s" onclick="change_active(6)"><a href='#test'>Testimonials</a></li>
-   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="5s" onclick="change_active(7)"><a href='#cont'>Contact Us</a></li>
+   <li  class="wow slideInLeft navChange active" style="padding-left:2vw" animation-duration="1s" animation-delay="1s" onclick="change_active(0,1)"><a href='#saga'>Home</a></li>
+   <li   class="wow slideInLeft navChange" animation-duration="1s" animation-delay="2s" onclick="change_active(1,1)"><a href='#aboutus'>About Us</a></li>
+   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="3s" onclick="change_active(2,1)"><a href='#whyca'>Why Ca?</a></li>
+   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="4s" onclick="change_active(3,1)"><a href='#incentives'>Incentives</a></li>
+   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="5s" onclick="change_active(4,1)"><a href='#container-fluid'>Responsibilities</a></li>
+   <li   class="wow slideInLeft navChange" animation-duration="1s"  animation-delay="6s" onclick="change_active(5,1)"><a href='#faq'>FAQ</a></li>
+   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="4s" onclick="change_active(6,1)"><a href='#test'>Testimonials</a></li>
+   <li  class="wow slideInLeft navChange" animation-duration="1s" animation-delay="5s" onclick="change_active(7,1)"><a href='#cont'>Contact Us</a></li>
   
 
 
@@ -870,23 +872,24 @@ Campus Ambassador Program
                  
               </div>
           </div>
-<div class="col-lg-5">
-<form action="form.php" class="getintouch" method="post">
-           <div class="txt">
-              <input  type="text" name="name" value="" placeholder="Your Name">
-           </div>
-           <div class="txt">
-              <input type="email" name="mail" value="" placeholder="Your E-mail">
-           </div>
-           <div class="txt">
-              <!-- <input type="text" name="" value="" placeholder="Message"> -->
-              <textarea name="message" rows="5" placeholder="Message"></textarea>
-           </div>
-              <input type="submit" value="SEND" class="btn">
-</form>
-</div>
-      </div>
+    <div class="col-lg-5">
+      <form action="form.php" id="form" class="getintouch" method="post">
+        <h2 style="color:white" id="response"></h2>
+          <div class="txt">
+            <input  type="text" name="name" id="name" value="" placeholder="Your Name">
+          </div>
+          <div class="txt">
+            <input type="email" name="mail" id="mail" value="" placeholder="Your E-mail">
+          </div>
+          <div class="txt">
+            <!-- <input type="text" name="" value="" placeholder="Message"> -->
+            <textarea name="message" rows="5" id="message" placeholder="Message"></textarea>
+          </div>
+            <input type="submit" value="SEND" onclick="showmessage()" class="btn">
+      </form>
+    </div>
   </div>
+</div>
 
 <div class="row  justify-content-center" style="padding-bottom:3vh;padding-top:10vh">
  <div class="col-lg-12 col-12 m-b-30 " style="text-align:center;padding-bottom:3vh">
