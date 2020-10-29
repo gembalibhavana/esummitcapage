@@ -383,7 +383,7 @@ h2 {
 #cssmenu > ul > li > a:hover,
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li.active > a {
-  color: rgba(0, 0, 255, 0.816);
+  color: rgb(37, 105, 250);
 }
 
 #cssmenu #menu-indicator {
@@ -446,7 +446,6 @@ h2 {
   border-bottom: 1px solid rgb(10, 10, 98);
   width: 18px;
   height: 3px;
-  
 }
 #cssmenu.small-screen #menu-button.menu-opened:after {
   border-top: 2px solid #444444;
@@ -559,44 +558,45 @@ h2 {
   text-align: center;
   font-size: 1.5em;
 }
-.getintouch{
-width:100%;
-max-width:500px;
-margin:auto;	
-padding:30px 0px;
-box-sizing:border-box;
-border-radius:8px;
-text-align:center;
-box-shadow:00 20px #000000b3;
-font-family:
+.getintouch {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px 0px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 00 20px #000000b3;
+  font-family: ;
 }
 
-.txt{
-border:1px solid gray;
-margin: 8px 0;
-padding:12px 18px;
-border-radius:8px;
-color:#ddd;
+.txt {
+  border: 1px solid gray;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #ddd;
 }
 
-.txt input,.txt textarea{
-width:100%;
-font-size:18px;
-margin-top:1px;
-background:none;
-outline:none;
-border:none;
-color:#ddd;
+.txt input,
+.txt textarea {
+  width: 100%;
+  font-size: 18px;
+  margin-top: 1px;
+  background: none;
+  outline: none;
+  border: none;
+  color: #ddd;
 }
- .btn{
-display:inline-block;
-background:#141414;
-color:white;
-padding:10px 0;
-margin-top:10px;
-width:30%;
-font-weight:800;
-border: solid 2px white;
+.btn {
+  display: inline-block;
+  background: #141414;
+  color: white;
+  padding: 10px 0;
+  margin-top: 10px;
+  width: 30%;
+  font-weight: 800;
+  border: solid 2px white;
 }
 @media only screen and (max-width: 280px) {
   body,
