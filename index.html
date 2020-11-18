@@ -30,6 +30,23 @@
       height:100vh;
       overflow: hidden;
     }
+    #unicorn{
+      opacity: 0;
+      animation: fly 1s ease-out 500ms forwards;
+    }
+
+    @keyframes fly {
+      from {
+        opacity: 0;
+        transform: translateX(1000px);
+        
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
     #content1 {
   position: fixed;
   z-index: 2;
@@ -274,7 +291,7 @@
   <div class="container d-block d-md-none  align-items-center justify-content-center" id="header" style="color:white;width:103%;height:80vh">
     <div class="row " style="padding-top:20vh">
       <div class="col-12 d-flex align-items-center justify-content-center">
-        <h1 style="font-family:Arial, Helvetica, sans-serif" >
+        <h1 style="font-family:Arial, Helvetica, sans-serif"  id="unicorn">
           E-Summit'21
         </h1>
       </div>
@@ -282,14 +299,14 @@
     </div>
     <div class="row justify-content-center ">
       <div class="col-12 d-flex align-items-center justify-content-center">
-        <h6 style="font-family:Arial, Helvetica, sans-serif" style="text-align:center">
+        <h6 style="font-family:Arial, Helvetica, sans-serif" style="text-align:center"  id="unicorn">
           Campus Ambassador program
         </h6>
       </div>
     </div>
     <div class="row" style="margin-bottom:25vh">
       <div class="col-12 d-flex align-items-center justify-content-center">
-        <button style="background-color:black;font-size:15px;border-radius: 40px; color:white; border: 1px solid white;">
+        <button style="background-color:black;font-size:15px;border-radius: 40px; color:white; border: 1px solid white;"  id="unicorn">
           <img src="css/img/Facebook-Icon-PNG.png" style="height: 50px;width:50px;">&nbsp;Login with Facebook&nbsp;</button>
 
       </div>
@@ -310,16 +327,16 @@
 <div class=" col-12 col-md-5 d-none d-md-block " style="padding-top:45vh">
 
 
-<h1 style="font-family: 'Varela Round', sans-serif;"class="text-center" class="wow slideInRight" animation-duration="5s" animation-delay="5s" >
+<h1 style="font-family: 'Varela Round', sans-serif;"class="text-center" id="unicorn">
 E-Summit'21
 </h1>
 
-<h4 style="font-family: 'Varela Round', sans-serif;" class="text-center">
+<h4 style="font-family: 'Varela Round', sans-serif;" class="text-center" id="unicorn">
 Campus Ambassador Program
 </h4>
 <br>
 <div class="d-flex justify-content-center" >
-<button style="background-color:black;font-size:25px;border-radius: 40px; color:white; border: 1px solid white;font-family: 'Varela Round', sans-serif;">
+<button style="background-color:black;font-size:25px;border-radius: 40px; color:white; border: 1px solid white;font-family: 'Varela Round', sans-serif;"  id="unicorn">
 <img src="css/img/Facebook-Icon-PNG.png" style="height: 50px;width:50px">&nbsp;Login with Facebook&nbsp;</button>
 </div>
 </div>

@@ -223,7 +223,9 @@ h2 {
 #header {
   background-image: url("img/final.jpg");
 
-  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100%;
 }
 
 .card3 {
@@ -567,7 +569,6 @@ h2 {
   border-radius: 8px;
   text-align: center;
   box-shadow: 00 20px #000000b3;
-  
 }
 
 .txt {
