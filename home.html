@@ -207,10 +207,12 @@
       if(s===0)
       {
         document.getElementById('cssmenu').style.backgroundColor="transparent";
+        document.getElementById('mobilenav').style.backgroundColor="transparent";
       }
       else
       {
         document.getElementById('cssmenu').style.backgroundColor="rgba(0,0,0,0.5)";
+        document.getElementById('mobilenav').style.backgroundColor="rgba(0,0,0,0.8)";
       }
     }
 
@@ -240,12 +242,12 @@
     <div id="page" style="display:none;">
 
 <div class="d-block d-xl-none" id="first-div">
-  <nav class="navbar navbar-dark navbar-expand-lg  fixed-top">
-    <div class="container" style="font-family:Arial, Helvetica, sans-serif;font-weight: 700;">
+  <nav class="navbar navbar-dark navbar-expand-lg  fixed-top" id="mobilenav">
+    <div class="container" style="font-family:'Varela Round', Helvetica, sans-serif;font-weight: 700;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" >
         <span class="navbar-toggler-icon"></span>
        </button>
-       <a class="navbar-brand" href="#">ES'21 CA program</a>
+       <img src="css/img/white logo.png" height="35px" style="padding-right: 12px;margin-top: auto;"/>
        <div class="collapse navbar-collapse" id="Navbar">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active navChange2" onclick="change_active(0,0)"><a class="nav-link" href="#saga">Home</a></li>
@@ -266,7 +268,7 @@
 
 
 
-<div class="container-fluid d-none d-xl-block" style="position:fixed;z-index:2;width:100vw;font-weight:700;font-family:Arial, Helvetica, sans-serif">
+<div class="container-fluid d-none d-xl-block" style="position:fixed;z-index:2;width:100vw;font-weight:700;font-family:'Varela Round', Helvetica, sans-serif">
 <div id="cssmenu" style="background-color: transparent;">
 <ul>
    <li  class="wow slideInLeft navChange active nav-link-ltr1 nav-link1" style="margin-left:2vw" animation-duration="1s" animation-delay="1s" onclick="change_active(0,1)"><a href='#saga'>Home</a></li>
@@ -294,17 +296,17 @@
   <div class="container d-block d-md-none  align-items-center justify-content-center" id="header" style="color:white;width:103%;height:80vh">
     <div class="row " style="padding-top:20vh">
       <div class="col-12 d-flex align-items-center justify-content-center">
-        <h1 style="font-family:Arial, Helvetica, sans-serif"  id="unicorn">
-          E-Summit'21
-        </h1>
+        <h4 style="font-family: 'Varela Round', sans-serif;"  id="unicorn">
+          E-CELL IIT BHUBANESWAR's
+        </h4>
       </div>
 
     </div>
     <div class="row justify-content-center ">
       <div class="col-12 d-flex align-items-center justify-content-center">
-        <h6 style="font-family:Arial, Helvetica, sans-serif" style="text-align:center"  id="unicorn">
+        <h1 style="font-family: 'Varela Round', sans-serif;text-align:center"  id="unicorn">
           Campus Ambassador program
-        </h6>
+        </h1>
       </div>
     </div>
     <div class="row" style="margin-bottom:25vh">
@@ -330,13 +332,13 @@
 <div class=" col-12 col-md-5 d-none d-md-block " style="padding-top:45vh">
 
 
-<h1 style="font-family: 'Varela Round', sans-serif;"class="text-center" id="unicorn">
-E-Summit'21
-</h1>
+<h5 style="font-family: 'Varela Round', sans-serif;" class="text-center" id="unicorn">
+E-CELL IIT BHUBANESWAR's
+</h5>
 
-<h4 style="font-family: 'Varela Round', sans-serif;" class="text-center" id="unicorn">
+<h2 style="font-family: 'Varela Round', sans-serif;text-align: center;" class="text-center" id="unicorn">
 Campus Ambassador Program
-</h4>
+</h2>
 <br>
 <div class="d-flex justify-content-center" >
 <button style="background-color:black;font-size:25px;border-radius: 40px; color:white; border: 1px solid white;font-family: 'Varela Round', sans-serif;"  id="unicorn">
@@ -354,7 +356,7 @@ Campus Ambassador Program
   <div class="container-fluid" id="aboutus" style="color:white;height:auto;width:103vw">
           <div class="row" style="padding-top:13vh">
             <div class="col-12">
-              <h1 style="text-align:center;font-size:2rem"class=" wow fadeInUp" data-wow-duration="1s" style="font-family:Arial, Helvetica, sans-serif">About Us</h1>
+              <h1 style="text-align:center;font-size:2rem"class=" wow fadeInUp" data-wow-duration="1s" style="font-family:'Varela Round', Helvetica, sans-serif">About Us</h1>
             </div>
           </div>
           <div class="row justify-content-center" style="padding-top:3vh;padding-bottom:13vh;padding-right:3vw;padding-left:3vw">
@@ -381,7 +383,7 @@ Campus Ambassador Program
 
 
 <div class="container-fluid"  id="whyca" style="width:100vw;padding-top:5%;padding-bottom:5%;padding-left:3%;height:auto">
-<h2 class=" wow fadeInUp" data-wow-duration="1s" style="font-family:Arial, Helvetica, sans-serif">WHY CA?</h2><br><br>
+<h2 class=" wow fadeInUp" data-wow-duration="1s" style="font-family:'Varela Round', Helvetica, sans-serif">WHY CA?</h2><br><br>
     <section class="teamarea">
         <div class="container" style="color:black">
           <div class="row justify-content-center ">

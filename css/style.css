@@ -1,6 +1,7 @@
 body {
   /* background-color: rgb(35, 33, 33); */
   overflow-x: hidden;
+  font-family: "Varela Round";
 }
 
 /* body::-webkit-scrollbar {
@@ -42,10 +43,10 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Varela Round", Helvetica, sans-serif;
 }
 p {
-  font-family: sans-serif;
+  font-family: "Varela Round";
 }
 .bg2 {
   animation-direction: alternate-reverse;
@@ -379,7 +380,7 @@ h2 {
   transition: all 0.2s ease;
 }
 .navbar-dark {
-  border-bottom: 2px solid rgba(43, 17, 243, 0.946);
+  /* border-bottom: 2px solid rgba(43, 17, 243, 0.946); */
 }
 
 #cssmenu > ul > li > a:hover,
