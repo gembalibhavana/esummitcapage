@@ -1,6 +1,7 @@
 body {
   /* background-color: rgb(35, 33, 33); */
   overflow-x: hidden;
+  font-family: "Varela Round";
 }
 
 /* body::-webkit-scrollbar {
@@ -42,10 +43,10 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Varela Round", Helvetica, sans-serif;
 }
 p {
-  font-family: sans-serif;
+  font-family: "Varela Round";
 }
 .bg2 {
   animation-direction: alternate-reverse;
@@ -223,7 +224,9 @@ h2 {
 #header {
   background-image: url("img/final.jpg");
 
-  background-size: 100% 100%;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  max-width: 100%;
 }
 
 .card3 {
@@ -376,9 +379,9 @@ h2 {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.navbar-dark {
-  
-}
+ .navbar-dark {
+
+} 
 
 #cssmenu > ul > li > a:hover,
 #cssmenu > ul > li:hover > a,
@@ -567,7 +570,6 @@ h2 {
   border-radius: 8px;
   text-align: center;
   box-shadow: 00 20px #000000b3;
-  
 }
 
 .txt {
@@ -670,4 +672,3 @@ height:auto;
   margin:0 0 10px;
   }
 
-  
