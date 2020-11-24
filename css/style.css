@@ -659,6 +659,7 @@ height:auto;
   left:0;
   width:100%;
   transition:all 0.5s ease 0s;
+  
 }
 .team-member:hover .team-text{
   bottom:40%;
@@ -667,7 +668,7 @@ height:auto;
   display:block;
   text-transform:uppercase;
   letter-spacing:1px;
-  font-size:22px;
+  font-size:10px;
   font-weight:700px;
   margin:0 0 10px;
   }
