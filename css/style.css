@@ -625,9 +625,7 @@ h3{
   
 }
 
-.team-member:hover:before{
-  opacity:1;
-}
+
 .team-member{
   text-align:center;
   position:relative;
@@ -661,9 +659,7 @@ height:auto;
   transition:all 0.5s ease 0s;
   
 }
-.team-member:hover .team-text{
-  bottom:40%;
-}
+
 .team-member h3{
   display:block;
   text-transform:uppercase;
