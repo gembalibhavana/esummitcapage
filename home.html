@@ -225,27 +225,36 @@
         x[num].classList.add("active");
       }
       // changing background of navbar on clicking
-      function mobileNavbar_background(){
+      function mobileNavbar_background() {
         var navbar = document.querySelector("#mobilenav");
         navbar.setAttribute("style", "background-color: rgba(0, 0, 0, 0.8);");
-        if(document.querySelector("#mobilenav .navbar-collapse").classList.contains("show") && window.scrollY == 0)
-        document.getElementById("mobilenav").style.backgroundColor =
-          "transparent";
+        if (
+          document
+            .querySelector("#mobilenav .navbar-collapse")
+            .classList.contains("show") &&
+          window.scrollY == 0
+        )
+          document.getElementById("mobilenav").style.backgroundColor =
+            "transparent";
       }
       // closing navbar on clicking link
       function closingNav() {
-        var navLinks = document.getElementById("mobilenav").getElementsByClassName("nav-link");
-        for(var i=0;i<navLinks.length;i++)
-        {
+        var navLinks = document
+          .getElementById("mobilenav")
+          .getElementsByClassName("nav-link");
+        for (var i = 0; i < navLinks.length; i++) {
           navLinks[i].onclick = () => {
             document.querySelector("#mobilenav button").click();
-          }
+          };
         }
       }
     </script>
   </head>
 
-  <body onload="stopLoader();closingNav()" onscroll="scroller();scroll_active()">
+  <body
+    onload="stopLoader();closingNav()"
+    onscroll="scroller();scroll_active()"
+  >
     <div id="out">
       <div id="in">
         <div class="logo">
@@ -1291,6 +1300,10 @@
                 data-target="#carouselExampleIndicators"
                 data-slide-to="2"
               ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="3"
+              ></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -1308,9 +1321,10 @@
                       style="text-align: center; color: white"
                     >
                       <h1 style="font-size: 1.1rem" style="text-align: center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Blanditiis, natus?Lorem ipsum dolor sit Lorem ipsum
-                        dolor sit amet
+                        It was a great experience, all the events and guest
+                        talks were highly informative. The goodies and prizes
+                        were fantastic too. The coordination from the ESummit
+                        team made a lot of things easier.
                       </h1>
                       <br />
                     </div>
@@ -1328,7 +1342,7 @@
                     style="height: 5vh"
                   >
                     <h1 style="font-size: 1.2rem; color: white">
-                      Harsha Vardhan
+                      Ananya Mishra
                     </h1>
                   </div>
                   <div
@@ -1336,7 +1350,7 @@
                     style="height: 5vh"
                   >
                     <h1 style="font-size: 0.8rem; color: white">
-                      Gayathri Vidhya Parishad
+                      Indira Gandhi Institute of Technology, Sarang
                     </h1>
                   </div>
                 </div>
@@ -1349,9 +1363,10 @@
                   >
                     <div class="col-12" style="text-align: center">
                       <h1 style="font-size: 1.1rem">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repudiandae, ad?Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Temporibus?
+                        Each and every event added value to our ideas. The
+                        internfair event was the pick of the lot, it gave intern
+                        opportunities to lot of my college friends and I also
+                        loved the informal comic night.
                       </h1>
                     </div>
                   </div>
@@ -1369,16 +1384,14 @@
                   class="row align-items-center justify-content-center d-flex"
                   style="height: 5vh"
                 >
-                  <h1 style="font-size: 1.2rem; color: white">
-                    Harsha Vardhan
-                  </h1>
+                  <h1 style="font-size: 1.2rem; color: white">Rahul</h1>
                 </div>
                 <div
                   class="row align-items-center justify-content-center d-flex"
                   style="height: 4vh"
                 >
                   <h1 style="font-size: 0.8rem; color: white">
-                    Gayathri Vidhya Parishad
+                    Lendi Institute, Vizag
                   </h1>
                 </div>
               </div>
@@ -1390,8 +1403,49 @@
                   >
                     <div class="col-12" style="text-align: center">
                       <h1 style="font-size: 1.1rem">
-                        adfesfdrgdghisicing elit. Atque, Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Eius, animi.
+                        It was a fantastic summit. What I loved best was the
+                        guest talk by Mr.Lakkaraju. The talks were highly
+                        inspiring and also shared insightful experiences of some
+                        brilliant entrepreneurs.
+                      </h1>
+                    </div>
+                  </div>
+                  <div
+                    class="row align-items-center justify-content-center d-flex"
+                    style="height: 3vh"
+                  >
+                    <div
+                      style="width: 100px; height: 2px; background-color: white"
+                    ></div>
+                  </div>
+                  <div
+                    class="row align-items-center justify-content-center d-flex"
+                    style="height: 5vh"
+                  >
+                    <h1 style="font-size: 1.2rem; color: white">Aditya</h1>
+                  </div>
+                  <div
+                    class="row align-items-center justify-content-center d-flex"
+                    style="height: 5vh"
+                  >
+                    <h1 style="font-size: 0.8rem; color: white">
+                      Lendi Institute, Vizag
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div
+                    class="row d-flex align-items-center justify-content-center"
+                    style="padding-top: 10vh; color: white"
+                  >
+                    <div class="col-12" style="text-align: center">
+                      <h1 style="font-size: 1.1rem">
+                        The summit plays a major role in shaping the young minds
+                        and inclining them towards entrpreneurship and getting
+                        us connected with one of indias best entrepreneurs and
+                        investors.
                       </h1>
                     </div>
                   </div>
@@ -1408,7 +1462,7 @@
                     style="height: 5vh"
                   >
                     <h1 style="font-size: 1.2rem; color: white">
-                      Harsha Vardhan
+                      Anurag Pisipati
                     </h1>
                   </div>
                   <div
@@ -1416,7 +1470,7 @@
                     style="height: 5vh"
                   >
                     <h1 style="font-size: 0.8rem; color: white">
-                      Gayathri Vidhya Parishad
+                      CVR Hyderabad
                     </h1>
                   </div>
                 </div>
