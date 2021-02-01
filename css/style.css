@@ -507,9 +507,21 @@ h2 {
   z-index: 1;
   transform: translateY(100px);
 }
-.container-fluid .card2:hover .face.face1 {
+.container-fluid .card2:hover .face.face1.this1 {
   transform: translateY(0px);
   background: #ff0057;
+}
+.container-fluid .card2:hover .face.face1.this2 {
+  transform: translateY(0px);
+  background: #0073ff;
+}
+.container-fluid .card2:hover .face.face1.this3 {
+  transform: translateY(0px);
+  background: #108c31;
+}
+.container-fluid .card2:hover .face.face1.this4 {
+  transform: translateY(0px);
+  background: #ffd000;
 }
 .container-fluid .card2 .face.face2 {
   position: relative;
