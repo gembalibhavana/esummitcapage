@@ -367,8 +367,8 @@ h2 {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.navbar-dark {
-}
+/* .navbar-dark {
+} */
 
 #cssmenu > ul > li > a:hover,
 #cssmenu > ul > li:hover > a,

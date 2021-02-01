@@ -199,3 +199,18 @@ function scroll_active() {
     change_active(7, 1);
   }
 }
+function scroller() {
+  var s = window.scrollY;
+  if (s === 0) {
+    document.getElementById("cssmenu").style.backgroundColor =
+      "transparent";
+    if(!document.querySelector("#mobilenav .navbar-collapse").classList.contains("show"))
+      document.getElementById("mobilenav").style.backgroundColor =
+        "transparent";
+  } else {
+    document.getElementById("cssmenu").style.backgroundColor =
+      "rgba(0,0,0,0.5)";
+    document.getElementById("mobilenav").style.backgroundColor =
+      "rgba(0,0,0,0.8)";
+  }
+}

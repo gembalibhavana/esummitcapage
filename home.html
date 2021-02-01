@@ -216,21 +216,6 @@
         }, time);
       }
 
-      function scroller() {
-        var s = window.scrollY;
-        if (s === 0) {
-          document.getElementById("cssmenu").style.backgroundColor =
-            "transparent";
-          // document.getElementById("mobilenav").style.backgroundColor =
-          //   "transparent";
-        } else {
-          document.getElementById("cssmenu").style.backgroundColor =
-            "rgba(0,0,0,0.5)";
-          // document.getElementById("mobilenav").style.backgroundColor =
-          //   "rgba(0,0,0,0.8)";
-        }
-      }
-
       function change_active(num, type) {
         if (type == 1) var x = document.getElementsByClassName("navChange");
         else var x = document.getElementsByClassName("navChange2");
@@ -239,10 +224,28 @@
         }
         x[num].classList.add("active");
       }
+      // changing background of navbar on clicking
+      function mobileNavbar_background(){
+        var navbar = document.querySelector("#mobilenav");
+        navbar.setAttribute("style", "background-color: rgba(0, 0, 0, 0.8);");
+        if(document.querySelector("#mobilenav .navbar-collapse").classList.contains("show") && window.scrollY == 0)
+        document.getElementById("mobilenav").style.backgroundColor =
+          "transparent";
+      }
+      // closing navbar on clicking link
+      function closingNav() {
+        var navLinks = document.getElementById("mobilenav").getElementsByClassName("nav-link");
+        for(var i=0;i<navLinks.length;i++)
+        {
+          navLinks[i].onclick = () => {
+            document.querySelector("#mobilenav button").click();
+          }
+        }
+      }
     </script>
   </head>
 
-  <body onload="stopLoader();" onscroll="scroller();scroll_active()">
+  <body onload="stopLoader();closingNav()" onscroll="scroller();scroll_active()">
     <div id="out">
       <div id="in">
         <div class="logo">
@@ -256,7 +259,6 @@
         <nav
           class="navbar navbar-dark navbar-expand-lg fixed-top"
           id="mobilenav"
-          style="background-color: rgb(0, 0, 0, 0.8)"
         >
           <div
             class="container"
@@ -271,6 +273,7 @@
               type="button"
               data-toggle="collapse"
               data-target="#Navbar"
+              onclick="mobileNavbar_background()"
             >
               <span class="navbar-toggler-icon"></span>
             </button>
