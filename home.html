@@ -221,13 +221,13 @@
         if (s === 0) {
           document.getElementById("cssmenu").style.backgroundColor =
             "transparent";
-          document.getElementById("mobilenav").style.backgroundColor =
-            "transparent";
+          // document.getElementById("mobilenav").style.backgroundColor =
+          //   "transparent";
         } else {
           document.getElementById("cssmenu").style.backgroundColor =
             "rgba(0,0,0,0.5)";
-          document.getElementById("mobilenav").style.backgroundColor =
-            "rgba(0,0,0,0.8)";
+          // document.getElementById("mobilenav").style.backgroundColor =
+          //   "rgba(0,0,0,0.8)";
         }
       }
 
@@ -256,12 +256,14 @@
         <nav
           class="navbar navbar-dark navbar-expand-lg fixed-top"
           id="mobilenav"
+          style="background-color: rgb(0, 0, 0, 0.8)"
         >
           <div
             class="container"
             style="
               font-family: 'Varela Round', Helvetica, sans-serif;
               font-weight: 700;
+              z-index: 5;
             "
           >
             <button
@@ -747,7 +749,7 @@
         <br />
         <h2
           align="center"
-          style="color: white"
+          style="color: white; font-size: 40px"
           class="wow fadeInUp"
           data-wow-duration="1s"
         >
@@ -766,11 +768,14 @@
                     <div class="side-one" style="transform: skew(-0.2deg)">
                       <div class="card wow bounceInLeft card3" id="card1">
                         <div class="card-body text-center" style="color: white">
-                          <h4>PUBLICIZE</h4>
+                          <h4 style="text-transform: uppercase">
+                            Internship opportunities
+                          </h4>
                           <br />
+
                           <p>
-                            Publicize E-Summit’21 in your college by putting up
-                            our posters on the notice boards of your college.
+                            Grab the opportunity of an internship by being one
+                            of the top 20 Campus Ambassadors
                           </p>
                         </div>
                       </div>
@@ -786,14 +791,19 @@
                 <div class="team-single">
                   <div class="content-area">
                     <div class="side-one" style="transform: skew(-0.2deg)">
-                      <div class="card wow bounceInLeft card3" id="card1">
-                        <div class="card-body text-center" style="color: white">
-                          <h4>COMMUNICATE</h4>
+                      <div
+                        class="card wow bounceInRight card3"
+                        id="card1"
+                        style="color: white"
+                      >
+                        <div class="card-body text-center">
+                          <h4 style="text-transform: uppercase">
+                            Exclusive courses
+                          </h4>
                           <br />
-
                           <p>
-                            Share and publicize the events and posters of
-                            E-Summit’21 in all forms of social media.
+                            Access to twenty exclusive courses will be provided
+                            to the top performing Campus Ambassadors.
                           </p>
                         </div>
                       </div>
@@ -811,12 +821,12 @@
                     <div class="side-one" style="transform: skew(-0.2deg)">
                       <div class="card wow bounceInRight card3" id="card1">
                         <div class="card-body text-center" style="color: white">
-                          <h4>GET PASSES</h4>
+                          <h4>GOODIES</h4>
                           <br />
                           <p>
-                            Free pass for any one of the competitions of
-                            E-Summit’21 for top 30 Campus Ambassadors based on
-                            their performance.
+                            Free goodies and passes for any one of the
+                            competitions of E-Summit’21 for top 30 Campus
+                            Ambassadors based on their performance.
                           </p>
                         </div>
                       </div>
@@ -862,14 +872,11 @@
                     <div class="side-one" style="transform: skew(-0.2deg)">
                       <div class="card wow bounceInLeft card3" id="card1">
                         <div class="card-body text-center" style="color: white">
-                          <h4 style="text-transform: uppercase">
-                            Internship opportunity
-                          </h4>
+                          <h4>CERTIFICATIONS</h4>
                           <br />
-
                           <p>
-                            Grab the opportunity of an internship by being one
-                            of the top 20 Campus Ambassadors
+                            Publicize E-Summit’21 in your college by putting up
+                            our posters on the notice boards of your college.
                           </p>
                         </div>
                       </div>
@@ -885,19 +892,14 @@
                 <div class="team-single">
                   <div class="content-area">
                     <div class="side-one" style="transform: skew(-0.2deg)">
-                      <div
-                        class="card wow bounceInRight card3"
-                        id="card1"
-                        style="color: white"
-                      >
-                        <div class="card-body text-center">
-                          <h4 style="text-transform: uppercase">
-                            Exclusive courses
-                          </h4>
+                      <div class="card wow bounceInLeft card3" id="card1">
+                        <div class="card-body text-center" style="color: white">
+                          <h4>GET ENDORSED</h4>
                           <br />
+
                           <p>
-                            Access to twenty exclusive courses will be provided
-                            to the top performing Campus Ambassadors.
+                            Share and publicize the events and posters of
+                            E-Summit’21 in all forms of social media.
                           </p>
                         </div>
                       </div>
@@ -1025,7 +1027,7 @@
               <div class="content-overlay"></div>
               <img
                 class="content-image"
-                style="border-radius: 50%"
+                style="border-radius: 50%; padding: 21px"
                 src="https://pbs.twimg.com/profile_images/1239683100210151424/l51hrkw2_400x400.jpg"
               />
               <div class="content-details fadeIn-bottom">
@@ -1033,6 +1035,26 @@
                 <p class="content-text">
                   <a style="text-decoration: none" href="https://refier.com/"
                     >Refier</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="content">
+              <div class="content-overlay"></div>
+              <img
+                class="content-image"
+                style="padding: 10px"
+                src="https://media-exp1.licdn.com/dms/image/C510BAQHQCh6ucnJcNA/company-logo_200_200/0/1579262621438?e=2159024400&v=beta&t=qWn4AlwoqbJ98XHCRLg5-PEvIQX1-TQ7dBcDiBI8SSQ"
+              />
+              <div class="content-details fadeIn-bottom">
+                <h3 class="content-title">Internship opportunity at</h3>
+                <p class="content-text">
+                  <a
+                    style="text-decoration: none"
+                    href="https://www.mystartupyatra.com/index.php/en/"
+                    >Smart Bridge</a
                   >
                 </p>
               </div>
@@ -1206,7 +1228,7 @@
 
               <div>
                 <p>
-                  By being a CAmpus Ambassador, one gets the chance of gaining
+                  By being a Campus Ambassador, one gets the chance of gaining
                   experience in dealing a lot of students, which helps in
                   developing management skills. On successful completion of the
                   program, the top performing Campus Ambassadors will be given
